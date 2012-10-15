@@ -1,11 +1,15 @@
 #!/usr/bin/python
 
+# USAGE 
+# DirectoryServer [port]
+
 import sys
 import SocketServer
 import thread
 import time
 import subprocess
 
+# this is run each time the server gets a TCP packet
 class MyTCPHandler(SocketServer.StreamRequestHandler):
 
     def handle(self):
@@ -21,10 +25,12 @@ class MyTCPHandler(SocketServer.StreamRequestHandler):
             self.wfile.write(user + "\n")
         #self.wfile.write(ipuserlist)
 
+# add a user
 def addUser(toAdd):
     if (toAdd) not in ipuserlist:
         ipuserlist.append(toAdd)
 
+# remove a user
 def removeUser(toRemove):
     #print toRemove
     ipuserlist.remove(toRemove)
@@ -42,6 +48,7 @@ def main():
     except KeyboardInterrupt:
         server.socket.close()
 
+# print out the directory list periodically
 def server_print():
     while(1):
         time.sleep(5)
@@ -52,4 +59,6 @@ try:
     thread.start_new_thread(server_print, ())
 except:
     print "Error: unable to start thread"
+
+# start the server
 main()
