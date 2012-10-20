@@ -10,3 +10,17 @@
 \\vermouth\homes\braun4\my documents\visual studio 2010\Projects\TalkSee\TalkSee\obj\Debug\TalkSee.g.resources
 \\vermouth\homes\braun4\my documents\visual studio 2010\Projects\TalkSee\TalkSee\obj\Debug\TalkSee.dll
 \\vermouth\homes\braun4\my documents\visual studio 2010\Projects\TalkSee\TalkSee\obj\Debug\TalkSee.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\Bin\Debug\ApplicationIcon.png
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\Bin\Debug\Background.png
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\Bin\Debug\TalkSee.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\Bin\Debug\TalkSee.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\Bin\Debug\AppManifest.xaml
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\Bin\Debug\TalkSee.xap
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\obj\Debug\App.g.i.cs
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\obj\Debug\MainPage.g.i.cs
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\obj\Debug\TalkSee.g.resources
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\obj\Debug\TalkSee.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\obj\Debug\TalkSee.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\TalkSee\obj\Debug\XapCacheFile.xml
