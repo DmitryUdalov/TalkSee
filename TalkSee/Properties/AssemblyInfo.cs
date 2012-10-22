@@ -1,19 +1,18 @@
-﻿using System.Reflection;
+﻿// -
+// <copyright file="AssembkyInfo.cs" company="Microsoft Corporation">
+//    Copyright (c) Microsoft Corporation.  All rights reserved.
+// </copyright>
+// -
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TalkSee")]
+[assembly: AssemblyTitle("Speech To Text Sample App")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Purdue University Computer Science Department")]
-[assembly: AssemblyProduct("TalkSee")]
-[assembly: AssemblyCopyright("Copyright © Purdue University Computer Science Department 2012")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -21,17 +20,5 @@ using System.Resources;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2ca9128e-ca35-4f7b-95e7-8cf05562000d")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: NeutralResourcesLanguageAttribute("en-US")]
+[assembly: Guid("bf7c8d33-4b74-4e2c-b241-0d28f904bbbf")]
+ 

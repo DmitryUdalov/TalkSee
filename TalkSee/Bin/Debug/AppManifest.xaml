@@ -1,6 +1,7 @@
-﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="TalkSee" EntryPointType="TalkSee.App" RuntimeVersion="4.7.50308.0">
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="SpeechToTextSampleApp" EntryPointType="SpeechToTextSampleApp.App" RuntimeVersion="4.7.50308.0">
   <Deployment.Parts>
-    <AssemblyPart x:Name="TalkSee" Source="TalkSee.dll" />
-    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="SpeechToTextSampleApp" Source="SpeechToTextSampleApp.dll" />
+    <AssemblyPart x:Name="Microsoft.Hawaii.ClientBase" Source="Microsoft.Hawaii.ClientBase.dll" />
+    <AssemblyPart x:Name="Microsoft.Hawaii.Speech.Client" Source="Microsoft.Hawaii.Speech.Client.dll" />
   </Deployment.Parts>
 </Deployment>
