@@ -15,6 +15,7 @@ namespace SpeechToTextSampleApp
 {
     public partial class Contacts : PhoneApplicationPage
     {
+
         public Contacts()
         {
             InitializeComponent();

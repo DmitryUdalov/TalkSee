@@ -27,7 +27,10 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <ListBox x:Name="ContactsListBox" Grid.Row="1" Margin="12,0,12,0">
+            <!--List of contacts will be inserted in this box-->
+            
+        </ListBox>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
