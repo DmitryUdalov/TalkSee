@@ -19,6 +19,18 @@ namespace SpeechToTextSampleApp
         public Contacts()
         {
             InitializeComponent();
+            Loaded += new RoutedEventHandler(Contacts_Loaded);
+        }
+
+        void Contacts_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<UserInfo> directoryList = new List<UserInfo>();
+            string name = "Test";
+            int port = 3459;
+            int id = 1109;
+            int status = 0;
+            directoryList.Add(new UserInfo(name, port, id, status));
+            ContactsListBox.ItemsSource = directoryList;
         }
     }
 }

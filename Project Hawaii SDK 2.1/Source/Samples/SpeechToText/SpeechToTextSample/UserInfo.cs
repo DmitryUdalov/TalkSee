@@ -18,6 +18,18 @@ namespace SpeechToTextSampleApp
         private int _portNumber;
         private int _userID;
         private int _status;
+        private string name;
+        private int port;
+        private int id;
+
+        public UserInfo(string name, int port, int id, int status)
+        {
+            // TODO: Complete member initialization
+            this.name = name;
+            this.port = port;
+            this.id = id;
+            this.Status = status;
+        }
         //Available = 0, Offline = 1, Busy = 2
 
         public string UserName
