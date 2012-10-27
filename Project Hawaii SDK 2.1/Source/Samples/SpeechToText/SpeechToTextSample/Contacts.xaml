@@ -27,19 +27,25 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <ListBox x:Name="ContactsListBox" Grid.Row="1" Margin="12,0,12,0">
+        <ListBox Name="ContactsListBox" Grid.Row="1" Margin="12,0,12,0">
             <!--List of contacts will be inserted in this box-->
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Button Width="460" Height="120">
+                    <Button Width="460" Height="120" Click="Button_Click">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal" Height="80" Width="400">
-                                <StackPanel Orientation="Horizontal" Height="40">
-                                    <TextBlock Width="100" FontSize="22" Text="Date:" Height="40"></TextBlock>
-                                    
+                                <!-- <Image Source="{Binding Image}" Width="80" Height="80"/>-->
+                                <StackPanel Orientation="Vertical" Height="80">
+                                    <StackPanel Orientation="Horizontal" Height="40">
+                                        <TextBlock Width="110" FontSize="22" Text="Username:" Height="40"/>
+                                        <TextBlock Width="190" FontSize="22" Text="{Binding UserName}" Height="40"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Height="40">
+                                        <TextBlock Width="110" FontSize="22" Text="Status:" Height="40"/>
+                                        <TextBlock Width="190" FontSize="22" Text="{Binding Status}" Height="40"/>
+                                    </StackPanel>
                                 </StackPanel>
                             </StackPanel>
-                            
                         </Button.Content>
                     </Button>
                 </DataTemplate>

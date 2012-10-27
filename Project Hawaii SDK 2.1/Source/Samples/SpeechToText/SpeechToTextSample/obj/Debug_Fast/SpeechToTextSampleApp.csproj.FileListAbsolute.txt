@@ -67,3 +67,5 @@ C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\S
 C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.dll
 C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.pdb
 C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\XapCacheFile.xml
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\Microsoft.Phone.Controls.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\Microsoft.Phone.Controls.xml

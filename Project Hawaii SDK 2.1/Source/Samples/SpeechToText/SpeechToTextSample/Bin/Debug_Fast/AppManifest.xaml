@@ -3,5 +3,6 @@
     <AssemblyPart x:Name="SpeechToTextSampleApp" Source="SpeechToTextSampleApp.dll" />
     <AssemblyPart x:Name="Microsoft.Hawaii.ClientBase" Source="Microsoft.Hawaii.ClientBase.dll" />
     <AssemblyPart x:Name="Microsoft.Hawaii.Speech.Client" Source="Microsoft.Hawaii.Speech.Client.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
   </Deployment.Parts>
 </Deployment>

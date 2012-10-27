@@ -28,9 +28,14 @@ namespace SpeechToTextSampleApp
             string name = "Test";
             int port = 3459;
             int id = 1109;
-            int status = 0;
+            string status = "Available";
             directoryList.Add(new UserInfo(name, port, id, status));
             ContactsListBox.ItemsSource = directoryList;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
     }
 }
