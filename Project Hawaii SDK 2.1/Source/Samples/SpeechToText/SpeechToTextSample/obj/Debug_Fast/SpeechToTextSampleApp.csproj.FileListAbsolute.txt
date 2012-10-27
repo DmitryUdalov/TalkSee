@@ -44,3 +44,26 @@ C:\Users\mhiga\Desktop\TalkSee Local\Microsoft Research\Project Hawaii SDK 2.1\S
 C:\Users\mhiga\Desktop\TalkSee Local\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.dll
 C:\Users\mhiga\Desktop\TalkSee Local\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.pdb
 C:\Users\mhiga\Desktop\TalkSee Local\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\XapCacheFile.xml
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\ApplicationIcon.png
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\Background.png
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\SpeechToTextSampleApp.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\SpeechToTextSampleApp.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\AppManifest.xaml
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\HawaiiSpeechToTextSampleApp.xap
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\Microsoft.Hawaii.ClientBase.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\Microsoft.Hawaii.Speech.Client.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\Microsoft.Hawaii.ClientBase.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\Microsoft.Hawaii.ClientBase.xml
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\Microsoft.Hawaii.Speech.Client.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\bin\Debug_Fast\Microsoft.Hawaii.Speech.Client.xml
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\App.g.i.cs
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\MainPage.g.i.cs
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\Contacts.g.i.cs
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\RecognizedSpeechPage.g.i.cs
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.g.resources
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.SpeechResources.resources
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.csproj.GenerateResource.Cache
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\SpeechToTextSampleApp.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\Project Hawaii SDK 2.1\Source\Samples\SpeechToText\SpeechToTextSample\obj\Debug_Fast\XapCacheFile.xml
