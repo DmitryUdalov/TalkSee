@@ -1,0 +1,3219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Hawaii.Smash.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Hawaii.Smash.Client.NamespaceDoc">
+            <summary>
+            The Microsoft.Hawaii.Smash.Client namespace provides classes that implement the client library 
+            that connects to the Hawaii Smash Service to enable social computing scenarios.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.CreateBlobAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.#ctor(Microsoft.Hawaii.HttpMethod,System.Object)">
+            <summary>
+            Initializes a new instance of the AbortableServiceAgent class
+            </summary>
+            <param name="requestMethod"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AbortableProcessRequest(Microsoft.Hawaii.ServiceAgent{`0}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="onComplete"></param>
+            <param name="asyncState"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.IAbortableAsyncResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.IAbortableAsyncResult.Abort(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="timedOut"></param>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.myLock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.onComplete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.asyncState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.asyncWaitHandle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.#ctor(Microsoft.Hawaii.ServiceAgent{`0}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Initializes a new instance of the AsyncResult class
+            </summary>
+            <param name="onComplete"></param>
+            <param name="asyncState"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.OnCompleted(`0)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.Abort(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="timedOut"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.AsyncState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.AsyncWaitHandle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.CompletedSynchronously">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.AbortableServiceAgent`1.AsyncResult.IsCompleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.CreateBlobAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateBlobAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the CreateBlobAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="fileExtension"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateBlobAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the CreateBlobAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="fileExtension"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateBlobAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateBlobAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateBlobAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.CreateBlobAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.AddPageToBlobAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.AddPageToBlobAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AddPageToBlobAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.String,System.String,System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            Initializes a new instance of the AddPageToBlobAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="blobAddress"></param>
+            <param name="blobSharedSignature"></param>
+            <param name="chunk"></param>
+            <param name="id"></param>
+            <param name="done"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AddPageToBlobAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.String,System.String,System.Byte[],System.Int32,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the AddPageToBlobAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="blobAddress"></param>
+            <param name="blobSharedSignature"></param>
+            <param name="chunk"></param>
+            <param name="id"></param>
+            <param name="done"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AddPageToBlobAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AddPageToBlobAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.AddPageToBlobAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.AddPageToBlobAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.CreateBlobResponse">
+            <summary>
+            The wire representation of the CreateBlobAsync result.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.AbortableServiceResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.AbortableServiceResult.Aborted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateBlobResponse.BlobAddress">
+            <summary>
+            Gets or sets the tentative blob URI for the new blob.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateBlobResponse.BlobSharedSignature">
+            <summary>
+            Gets or sets the shared signature for the new blob.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.ModifySessionResponse">
+            <summary>
+            The wire representation of the ModifySessionAsync result.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.GetSessionInfoRequest">
+            <summary>
+            The wire representation of the GetSessionInfoAsync call.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetSessionInfoRequest.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetSessionInfoRequest.SessionID">
+            <summary>
+            Gets or sets the session ID of the session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.EnumSessionsResponse">
+            <summary>
+            The wire representation of the EnumSessionsAsync result.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.EnumSessionsResponse.Sessions">
+            <summary>
+            Gets or sets a list of SessionInfo objects describing the enumerated sessions.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.CreateBlobCompletedArgs">
+            <summary>
+            Argument class passed to the completion handler for CreateBlobAsync.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateBlobCompletedArgs.#ctor(System.Exception,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the CreateBlobCompletedArgs class.
+            </summary>
+            <param name="error">null or an Exception if an error occurred.</param>
+            <param name="cancelled">true if the call has been cancelled programmatically.</param>
+            <param name="userState">The userState argument passed on the call to CreateBlobAsync.</param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.CreateBlobCompletedArgs.BlobUploader">
+            <summary>
+            The helper object used for async upload of data from a stream to the blob storage.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.ChangeSetLimitException">
+            <summary>
+            This exception is thrown if too many changes have been added to a single table change context.
+            The total limit is 100 'change units', whereas each record add accounts for 1 change units, and each record delete / update accounts for 3 change units.
+            For example, 70 adds, 8 updates and 2 deletes amount to a total of 100 change units. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashException">
+            <summary>
+            Base class for Smash exception classes. Applications to not use this directly.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashException.#ctor">
+            <summary>
+            Initializes a new instance of the SmashException class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the SmashException class.
+            </summary>
+            <param name="message">A descriptive message.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the SmashException class.
+            </summary>
+            <param name="message">A descriptive message.</param>
+            <param name="inner">The inner exception.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ChangeSetLimitException.#ctor">
+            <summary>
+            Initializes a new instance of the ChangeSetLimitException class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ChangeSetLimitException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ChangeSetLimitException class.
+            </summary>
+            <param name="message">A descriptive message.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ChangeSetLimitException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the ChangeSetLimitException class.
+            </summary>
+            <param name="message">A descriptive message.</param>
+            <param name="inner">The inner exception.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire">
+            <summary>
+            This class represents per-record data used to synchronize SmashTable records between sessions and the Smash service.
+            Applications do not use this class directly.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire.GetEstimatedEgressSize">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire.Action">
+            <summary>
+            Gets or sets the type of operation this data record represents
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire.GUID">
+            <summary>
+            Gets or set the unique record identifier for this row
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire.TimeStamp">
+            <summary>
+            Gets or sets the timestamp (UTC ticks) for last modification of this record
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire.CreatorClient">
+            <summary>
+            Gets or sets the client id for the creator of this row
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire.ModificationFlag">
+            <summary>
+            Gets or sets a flag used to keep track of modification state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire.TypeHash">
+            <summary>
+            Gets or sets the type hash for the SmashTable this row belongs to
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire.Blob">
+            <summary>
+            Gets or sets the JSON serialized SmashRecord payload for this row
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.WipeSessionRequest">
+            <summary>
+            The wire representation of the WipeSessionAsync call.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.WipeSessionRequest.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.WipeSessionRequest.SessionID">
+            <summary>
+            Gets or sets the session ID of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.WipeSessionRequest.ManagementID">
+            <summary>
+            Gets or sets the owner's management secret required to enumerate, modify, wipe sessions.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.CreateBlobRequest">
+            <summary>
+            The wire representation of the CreateBlobAsync call.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateBlobRequest.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateBlobRequest.SessionID">
+            <summary>
+            Gets or sets the session ID of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateBlobRequest.ClientID">
+            <summary>
+            Gets or sets the identifier of the client.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateBlobRequest.FileExtension">
+            <summary>
+            Gets or sets the file name extension for the blob.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.ErrorClient">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.ErrorServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.InvalidArgument">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.Timeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.SessionAlreadyExists">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.SessionUnknown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.ClientAlreadyJoined">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.UserUnknown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.AccessDenied">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.AccessConflict">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.OutOfStorageQuota">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.TablesInitialized">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.SessionCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.SessionModified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.SessionJoined">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.SessionFinalized">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.SessionWiped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.SessionsEnumerated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.RowsRead">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.RowSent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.BlobCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SmashServiceResultCodes.BlobPageAdded">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Common.SendRowAction">
+            <summary>
+            Type of operation a DataRow_Wire represents.
+            Applications do not use this enumeration directly.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SendRowAction.Add">
+            <summary>
+            Addition of a record
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SendRowAction.Update">
+            <summary>
+            Update of a record
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.SendRowAction.Delete">
+            <summary>
+            Deletion of a record
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Common.SessionInfo">
+            <summary>
+            Details about a Smash Session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.MeetingToken">
+            <summary>
+            Gets or sets the meeting token.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.SessionID">
+            <summary>
+            Gets or sets the session ID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.ManagementID">
+            <summary>
+            Gets or sets the management secret.
+            Non-owners of the session will only see Guid.Empty values for this field.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.SessionName">
+            <summary>
+            Gets or sets name of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.OwnerName">
+            <summary>
+            Gets or sets user name of the session owner.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.OwnerEmail">
+            <summary>
+            Gets or sets email address of the session owner.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.CreatedTime">
+            <summary>
+            Gets or sets time (UTC) this session was created.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.Lifetime">
+            <summary>
+            Gets or sets the duration of the session lifetime.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.Attendees">
+            <summary>
+            Gets or sets the list of user names allowed to join the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.TotalTableDataStored">
+            <summary>
+            Gets or sets the approximate total number of bytes of table storage used by the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.TotalStorageTransactions">
+            <summary>
+            Gets or sets the approximate total number of storage transactions used by the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.TotalDataEgress">
+            <summary>
+            Gets or sets the approximate total number of bytes of Azure data center egress used by the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.SessionInfo.TotalBlobDataStored">
+            <summary>
+            Gets or sets the approximate total number of bytes of blob storage used by the session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.CreateSessionAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.CreateSessionAgent.MaximumSessionLifetimeInDays">
+            <summary>
+            Maximum Session Lifetime In Days
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.CreateSessionAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateSessionAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.TimeSpan,System.Guid)">
+            <summary>
+            Initializes a new instance of the CreateSessionAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionName"></param>
+            <param name="ownerName"></param>
+            <param name="ownerEmail"></param>
+            <param name="attendees"></param>
+            <param name="lifetime"></param>
+            <param name="managementID"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateSessionAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.TimeSpan,System.Guid,System.Object)">
+            <summary>
+            Initializes a new instance of the CreateSessionAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionName"></param>
+            <param name="ownerName"></param>
+            <param name="ownerEmail"></param>
+            <param name="attendees"></param>
+            <param name="lifetime"></param>
+            <param name="managementID"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateSessionAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateSessionAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateSessionAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.CreateSessionAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.WipeSessionResponse">
+            <summary>
+            The wire representation of the WipeSessionAsync result.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.CreateSessionCompletedArgs">
+            <summary>
+            Argument class passed to the completion handler for CreateSessionAsync.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.CreateSessionCompletedArgs.#ctor(System.Exception,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the CreateSessionCompletedArgs class.
+            Applications do not call this directly.
+            </summary>
+            <param name="error">null or an Exception if an error occurred.</param>
+            <param name="cancelled">true if the call has been cancelled programmatically.</param>
+            <param name="userState">The userState argument passed on the call to CreateSessionAsync.</param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.CreateSessionCompletedArgs.MeetingToken">
+            <summary>
+            The MeetingToken for the new session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.CreateSessionCompletedArgs.SessionID">
+            <summary>
+            The SessionID for the new session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Common.NamespaceDoc">
+            <summary>
+            The Microsoft.Hawaii.Smash.Client.Common namespace provides classes that implement 
+            classes for Smash session records.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.WipeSessionAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.WipeSessionAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.WipeSessionAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Initializes a new instance of the WipeSessionAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="managementID"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.WipeSessionAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Object)">
+            <summary>
+            Initializes a new instance of the WipeSessionAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="managementID"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.WipeSessionAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.WipeSessionAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.WipeSessionAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.WipeSessionAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.JoinSessionAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.JoinSessionAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.JoinSessionAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the JoinSessionAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="userName"></param>
+            <param name="userEmail"></param>
+            <param name="deviceName"></param>
+            <param name="forceRejoin"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.JoinSessionAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.String,System.String,System.String,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the JoinSessionAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="userName"></param>
+            <param name="userEmail"></param>
+            <param name="deviceName"></param>
+            <param name="forceRejoin"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.JoinSessionAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.JoinSessionAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.JoinSessionAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.JoinSessionAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.SendRowsResponse">
+            <summary>
+            The wire representation of the result of the method used to send client updates of SmashTable to the Smash service.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.SendRowsResponse.TimeStampStart">
+            <summary>
+            Gets or sets a timestamp value used by the service to preserve sort order of row updates.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.SendRowsResponse.RowGuids">
+            <summary>
+            Gets or sets list of unique row Guids assigned by the service to the rows.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.ISmashTableChangeContextInternal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ISmashTableChangeContextInternal.GetUnfrozen(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="frozen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ISmashTableChangeContextInternal.AddUnfrozen(System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="frozen"></param>
+            <param name="unfrozen"></param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionRequest">
+            <summary>
+            The wire representation of the JoinSessionAsync call.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionRequest.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionRequest.UserName">
+            <summary>
+            Gets or sets user name joining the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionRequest.UserEmail">
+            <summary>
+            Gets or sets email address of the user joining the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionRequest.DeviceName">
+            <summary>
+            Gets or sets device name of the user joining the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionRequest.ForceRejoin">
+            <summary>
+            Gets or sets a value used to override user+email+device uniqueness requirement for joining a session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.GetRowsRequest">
+            <summary>
+            The wire representation of the method retrieving SmashTable record adds/updates/deletes to the Smash service.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetRowsRequest.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetRowsRequest.SessionID">
+            <summary>
+            Gets or sets the session ID of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetRowsRequest.ClientID">
+            <summary>
+            Gets or sets the identifier of the client.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetRowsRequest.LastKnownRowTime">
+            <summary>
+            Gets or sets the last known row timestamp (in ticks UTC) for the client making the request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetRowsRequest.TimeOut">
+            <summary>
+            Gets or sets a timeout value (in ms) the service should hold the call for in a long poll.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetRowsRequest.Cached">
+            <summary>
+            Gets or sets a value used to indicate if the rows read should be retrieved from short-lived cache state in the service (true), or read directly from the Azure table.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.EnumSessionsRequest">
+            <summary>
+            The wire representation of the EnumSessionsAsync call.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.EnumSessionsRequest.ManagementID">
+            <summary>
+            Gets or sets the owner's management secret required to enumerate, modify, wipe sessions.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SaveChangesCompletedHandler">
+            <summary>
+            Delegate type for completion handler of SaveChangesAsync.
+            </summary>
+            <param name="sender">The SmashTableChangeContext instance calling the completion handler.</param>
+            <param name="e">The completion arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T">The record type for the SmashTable from which the SmashTableChangeContext was obtained.</typeparam>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.ISmashTableChangeContext">
+            <summary>
+            Base interface for SmashTableChangeContext&lt;T&gt;.
+            Application classes do not implement this interface.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ISmashTableChangeContext.Add(System.Object)">
+            <summary>
+            Adds a record
+            </summary>
+            <param name="r">record object. Type of record must be generic type T of SmashTable from which ISmashTableChangeContext was obtained.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ISmashTableChangeContext.Delete(System.Object)">
+            <summary>
+            Deletes a record
+            </summary>
+            <param name="r">record object. Type of record must be generic type T of SmashTable from which ISmashTableChangeContext was obtained.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ISmashTableChangeContext.SaveChangesAsync(System.Object)">
+            <summary>
+            Commit pending changes on change context
+            </summary>
+            <param name="state">User state. Will be passed as userState in completion event args.</param>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.ISmashTableChangeContext.SaveChangesCompleted">
+            <summary>
+            Event raised upon completion of SaveChangesAsync
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.ChangesPerAdd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.ChangesPerUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.MaxBatchSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.session">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.typeHash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.records">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.unfrozens">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.batchSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.#ctor(System.Int32,Microsoft.Hawaii.Smash.Client.SmashSession)">
+            <summary>
+            Initializes a new instance of the SmashTableChangeContext class.
+            </summary>
+            <param name="typeHash"></param>
+            <param name="session"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.Microsoft#Hawaii#Smash#Client#ISmashTableChangeContextInternal#GetUnfrozen(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="frozen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.Microsoft#Hawaii#Smash#Client#ISmashTableChangeContextInternal#AddUnfrozen(System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="frozen"></param>
+            <param name="unfrozen"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.SaveChangesAsync(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.Add(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="r"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.Delete(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="r"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.OnSaveChangesCompleted(Microsoft.Hawaii.Smash.Client.SaveChangesCompletedArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SmashTableChangeContext`1.SaveChangesCompleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.GetSessionInfoCompletedArgs">
+            <summary>
+            Argument class passed to the completion handler for GetSessionInfoAsync.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetSessionInfoCompletedArgs.#ctor(System.Exception,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the GetSessionInfoCompletedArgs class.
+            </summary>
+            <param name="error">null or an Exception if an error occurred.</param>
+            <param name="cancelled">true if the call has been cancelled programmatically.</param>
+            <param name="userState">The userState argument passed on the call to GetSessionInfoAsync.</param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.GetSessionInfoCompletedArgs.SessionInfo">
+            <summary>
+            An SessionInfo object containing details about a session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SendRowsAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SendRowsAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SendRowsAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Collections.Generic.IEnumerable{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire})">
+            <summary>
+            Initializes a new instance of the SendRowsAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="rowsWire"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SendRowsAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Collections.Generic.IEnumerable{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire},System.Object)">
+            <summary>
+            Initializes a new instance of the SendRowsAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="rowsWire"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SendRowsAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SendRowsAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SendRowsAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SendRowsAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.ModifySessionAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.ModifySessionAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ModifySessionAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the ModifySessionAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="managementID"></param>
+            <param name="attendeesAdd"></param>
+            <param name="attendeesRemove"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ModifySessionAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Object)">
+            <summary>
+            Initializes a new instance of the ModifySessionAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="managementID"></param>
+            <param name="attendeesAdd"></param>
+            <param name="attendeesRemove"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ModifySessionAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ModifySessionAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ModifySessionAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.ModifySessionAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.UploadCompletedArgs">
+            <summary>
+            Argument class passed to the completion handler for UploadAsync.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.UploadCompletedArgs.#ctor(System.Exception,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the UploadCompletedArgs class.
+            </summary>
+            <param name="error">null or an Exception if an error occurred.</param>
+            <param name="cancelled">true if the call has been cancelled programmatically.</param>
+            <param name="userState">The userState argument passed on the call to UploadAsync.</param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.UploadCompletedArgs.BlobAddress">
+            <summary>
+            A string containing the URI of the uploaded blob.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.JoinSessionCompletedArgs">
+            <summary>
+            Argument class passed to the completion handler for JoinSessionAsync.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.JoinSessionCompletedArgs.#ctor(System.Exception,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the JoinSessionCompletedArgs class.
+            </summary>
+            <param name="error">null or an Exception if an error occurred.</param>
+            <param name="cancelled">true if the call has been cancelled programmatically.</param>
+            <param name="userState">The userState argument passed on the call to JoinSessionAsync.</param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.JoinSessionCompletedArgs.Session">
+            <summary>
+            The session object for the joined session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.EnumSessionCompletedArgs">
+            <summary>
+            Argument class passed to the completion handler for EnumSessionAsync.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.EnumSessionCompletedArgs.#ctor(System.Exception,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the EnumSessionCompletedArgs class.
+            </summary>
+            <param name="error">null or an Exception if an error occurred.</param>
+            <param name="cancelled">true if the call has been cancelled programmatically.</param>
+            <param name="userState">The userState argument passed on the call to EnumSessionAsync.</param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.EnumSessionCompletedArgs.SessionInfos">
+            <summary>
+            An IEnumerable of SessionInfo objects containing details about sessions.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashClient">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClient.DefaultTimeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClient.WaitAfterTimeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClient.LongPollTimeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClient.useLongPoll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClient.identity">
+            <summary>
+            The client identity.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClient.abortGetRows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClient.abortGetRowsAck">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.#ctor">
+            <summary>
+            Initializes a new instance of the SmashClient class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.#ctor(Microsoft.Hawaii.ClientIdentity)">
+            <summary>
+            Initializes a new instance of the SmashClient class.
+            </summary>
+            <param name="identity">The application identity.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.GetRows(System.Guid,System.Guid,System.Guid,System.Int64,Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire[]@)">
+            <summary>
+            
+            </summary>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="lastKnownRowTime"></param>
+            <param name="rowsOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.SendRowsAsync(System.Guid,System.Guid,System.Guid,System.Collections.Generic.IEnumerable{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire},Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.SendRowsResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="rows"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.AddPageToBlob(System.Guid,System.Guid,System.Guid,System.String,System.String,System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="blobAddress"></param>
+            <param name="blobSharedSignature"></param>
+            <param name="page"></param>
+            <param name="id"></param>
+            <param name="close"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.AbortGetRows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.SmashServiceClient_GetRowsCompleted(Microsoft.Hawaii.Smash.Client.Contracts.GetRowsResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.SmashServiceClient_AddPageToBlobCompleted(Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashClient.Timeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashClient.UseLongPoll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashClient.RequestState`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClient.RequestState`1.done">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.RequestState`1.#ctor">
+            <summary>
+            Initializes a new instance of the RequestState class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.RequestState`1.SetDone">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClient.RequestState`1.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashClient.RequestState`1.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashClient.RequestState`1.Done">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.UploadProgressArgs">
+            <summary>
+            Argument class passed to the handler for upload progress.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.UploadProgressArgs.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the UploadProgressArgs class.
+            </summary>
+            <param name="userState">The userState argument passed on the call to UploadAsync.</param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.UploadProgressArgs.UploadedSize">
+            <summary>
+            Number of bytes already uploaded
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.UploadProgressArgs.Cancel">
+            <summary>
+            The event handler can set this to 'true' to abort upload of a blob.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SerializableAttribute">
+            <summary>
+            Indicates that a class can be serialized. 
+            This class cannot be inherited. 
+            This is a mock-up class used only for Windows Phone build. 
+            Applications do not use this class directly.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SerializableAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the System.SerializableAttribute class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashSession">
+            <summary>
+            A Smash session object. This holds all the state of a joined session.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.ThreadEnded">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.ThreadStopped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.ThreadPrepareToStop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.ThreadActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.SessionStateKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.client">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.identity">
+            <summary>
+            The client identity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.meetingToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.sessionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.clientID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.lastKnownRowTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.tables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.isActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.sessionThread">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.sessionThreadClient">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.dispatcher">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.deduper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.refreshInterval">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashSession.triggerRefresh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.#ctor(Microsoft.Hawaii.ClientIdentity,System.Windows.Threading.Dispatcher,System.Guid,System.Guid,System.Guid,Microsoft.Hawaii.Smash.Client.ISmashTable[])">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="dispatcher"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="tables"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.#ctor(Microsoft.Hawaii.ClientIdentity,System.Windows.Threading.Dispatcher,Microsoft.Hawaii.Smash.Client.SmashSession.SessionState,System.Collections.Generic.List{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire},Microsoft.Hawaii.Smash.Client.ISmashTable[])">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="dispatcher"></param>
+            <param name="state"></param>
+            <param name="rows"></param>
+            <param name="tables"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.JoinSessionFromState(System.String,System.String,System.Windows.Threading.Dispatcher,System.Collections.Generic.IDictionary{System.String,System.Object},Microsoft.Hawaii.Smash.Client.ISmashTable[])">
+            <summary>
+            Re-activates a session when application comes back from tombstone state.
+            </summary>
+            <param name="clientId">Azure Data Market client id used for authentication.</param>
+            <param name="clientSecret">Azure Data Market client secret used for authentication.</param>
+            <param name="dispatcher">The Dispatcher object. a dispatcher must be specified in order to use data binding with Smash.</param>
+            <param name="stateDictionary">The tombstoned state.</param>
+            <param name="tables">The set of SmashTable objects to join to the re-activated session.</param>
+            <returns>the Smash session object.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.Refresh">
+            <summary>
+            Forces a refresh of data in SmashTable associated with session. If session uses long poll, this has no effect.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.IsRecordOwned``1(Microsoft.Hawaii.Smash.Client.SmashRecordBase{``0})">
+            <summary>
+            Checks if a record has been created by current client.
+            </summary>
+            <typeparam name="T">generic T.</typeparam>
+            <param name="record">A record to be checked for ownership.</param>
+            <returns>true if record has been created by current client, false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.Shutdown">
+            <summary>
+            Initiates shutdown of a session. The session will disconnect from the service, the session data in the Smash service is preserved.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.Dispose">
+            <summary>
+            The IDisposable.Dispose() method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.DeactivateSession(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Prepares a session for tombstoning.
+            </summary>
+            <param name="stateDictionary">Dictionary to receive tombstoned state.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.ResumeSession">
+            <summary>
+            Resumes session synchronization after rejoining from tombstone states.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.PrepareDataRows``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Collections.Generic.List{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="rowList"></param>
+            <param name="typeHash"></param>
+            <param name="rows"></param>
+            <param name="changedOnly"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.SendDataRowsAsync(System.Collections.Generic.IEnumerable{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire},Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.SendRowsResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="rows"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.ProcessDataRows(System.Collections.Generic.IEnumerable{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire},System.Int64,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="rows"></param>
+            <param name="timeStampOverride"></param>
+            <param name="rowGuids"></param>
+            <param name="changeContextCall"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.ProcessDataRows(System.Collections.Generic.IEnumerable{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire})">
+            <summary>
+            
+            </summary>
+            <param name="rows"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.StartSessionThread">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.ClientIdentity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.RefreshInterval">
+            <summary>
+            Gets or sets the refresh interval (in ms) for data in all SmashTable joined to the session.
+            A value of 0 indicates that the Session will use 'long poll' for almost instantaneous refresh of session data.
+            A non-0 value specifies the number of ms between refresh operations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.MeetingToken">
+            <summary>
+            Gets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.SessionID">
+            <summary>
+            Gets the session ID of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.ClientID">
+            <summary>
+            Gets the unique identifier of the current client.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.Dispatcher">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.LastKnownRowTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.Client">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashSession.SessionState">
+            <summary>
+            Tombstone session state. Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashSession.SessionState.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.SessionState.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the tombstoned session state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.SessionState.SessionID">
+            <summary>
+            Gets or sets the session ID of the tombstoned session state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.SessionState.ClientID">
+            <summary>
+            Gets or sets the client identifier of the tombstoned session state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashSession.SessionState.LastKnownRowTime">
+            <summary>
+            Gets or sets the last known synchronization time of the tombstoned session state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.GetSessionInfoAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.GetSessionInfoAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetSessionInfoAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid)">
+            <summary>
+            Initializes a new instance of the GetSessionInfoAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetSessionInfoAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Object)">
+            <summary>
+            Initializes a new instance of the GetSessionInfoAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetSessionInfoAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetSessionInfoAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetSessionInfoAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.GetSessionInfoAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.ModifySessionRequest">
+            <summary>
+            The wire representation of the ModifySessionAsync call.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.ModifySessionRequest.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.ModifySessionRequest.SessionID">
+            <summary>
+            Gets or sets the session ID of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.ModifySessionRequest.ManagementID">
+            <summary>
+            Gets or sets the owner's management secret required to enumerate, modify, wipe sessions.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.ModifySessionRequest.AttendeesAdd">
+            <summary>
+            Gets or sets a list of user names to be added to the list of users allowed to join the session. Wildcard '*' matches all users.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.ModifySessionRequest.AttendeesRemove">
+            <summary>
+            Gets or sets a list of user names to be removed to the list of users allowed to join the session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionResponse">
+            <summary>
+            The wire representation of the JoinSessionAsync result.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionResponse.SessionID">
+            <summary>
+            Gets or sets the session ID of the joined session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionResponse.ClientID">
+            <summary>
+            Gets or sets the client id of the client which joined the session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.GetRowsResponse">
+            <summary>
+            The wire representation of the result of the method used to retrieve row updates from the Smash service.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetRowsResponse.RowsOut">
+            <summary>
+            A list of DataRow_Wire objects describing the row updates to be applied to the client's state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionResponse">
+            <summary>
+            The wire representation of the CreateSessionAsync result.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionResponse.SessionID">
+            <summary>
+            Gets or sets the session ID of the created session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1">
+            <summary>
+            The base class for all record types. Application record types used in SmashTable must derive from this.
+            See ChatRecord of the SmashSampleApp for an example.
+            </summary>
+            <typeparam name="T">The derived record type. Usage: public class MyRecord: SmashRecordBase&lt;MyRecord&gt; { ... }.</typeparam>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.sendAction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.recordID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.creatorClient">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.timeStamp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.frozen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.modified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.modificationFlag">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.userData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.#ctor">
+            <summary>
+            Initializes a new instance of the SmashRecordBase class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.GetUnfrozen(Microsoft.Hawaii.Smash.Client.ISmashTableChangeContext)">
+            <summary>
+            Gets a mutable copy of the record.
+            </summary>
+            <param name="context">The change context to associate the mutable copy with.</param>
+            <returns>A mutable copy of the record</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.GetRecordID">
+            <summary>
+            Get a unique identifier for the record, stable for the lifetime of the record.
+            </summary>
+            <returns>a unique identifier.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.IsLatest">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.Freeze">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.Thaw">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.OnChange">
+            <summary>
+            Derived record types must call this upon set operations on their public members.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.UserData">
+            <summary>
+            Associates user state with a record. This member is not synchronized with other session participants.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.SendAction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.RecordID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.CreatorClient">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.TimeStamp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.ModificationFlag">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashRecordBase`1.NeedsUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.JoinSessionCompletedHandler">
+            <summary>
+            Delegate type for completion handler of JoinSessionAsync.
+            </summary>
+            <param name="sender">The SessionManager instance calling the completion handler.</param>
+            <param name="e">The completion arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.CreateBlobCompletedHandler">
+            <summary>
+            Delegate type for completion handler of CreateBlobAsync.
+            </summary>
+            <param name="sender">The SessionManager instance calling the completion handler.</param>
+            <param name="e">The completion arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.CreateSessionCompletedHandler">
+            <summary>
+            Delegate type for completion handler of CreateSessionAsync.
+            </summary>
+            <param name="sender">The SessionManager instance calling the completion handler.</param>
+            <param name="e">The completion arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.ModifySessionCompletedHandler">
+            <summary>
+            Delegate type for completion handler of ModifySessionAsync.
+            </summary>
+            <param name="sender">The SessionManager instance calling the completion handler.</param>
+            <param name="e">The completion arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.EnumSessionsCompletedHandler">
+            <summary>
+            Delegate type for completion handler of EnumSessionsAsync.
+            </summary>
+            <param name="sender">The SessionManager instance calling the completion handler.</param>
+            <param name="e">The completion arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.GetSessionInfoCompletedHandler">
+            <summary>
+            Delegate type for completion handler of GetSessionInfoAsync.
+            </summary>
+            <param name="sender">The SessionManager instance calling the completion handler.</param>
+            <param name="e">The completion arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.WipeSessionCompletedHandler">
+            <summary>
+            Delegate type for completion handler of WipeSessionAsync.
+            </summary>
+            <param name="sender">The SessionManager instance calling the completion handler.</param>
+            <param name="e">The completion arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SessionManager">
+            <summary>
+            Manager class for Smash sessions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.#ctor">
+            <summary>
+            Constructor for SessionManager.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.JoinSessionAsync(System.String,System.String,System.Windows.Threading.Dispatcher,System.Guid,System.String,System.String,System.String,Microsoft.Hawaii.Smash.Client.ISmashTable[],System.Object)">
+            <summary>
+            Joins a Smash session. User+email+device must be unique across all joinees of a session.
+            </summary>
+            <param name="admClientId">Azure Data Market client id used for authentication.</param>
+            <param name="admClientSecret">Azure Data Market client secret used for authentication.</param>
+            <param name="dispatcher">The Dispatcher object. a dispatcher must be specified in order to use data binding with Smash.</param>
+            <param name="meetingToken">The meeting token of the session to join.</param>
+            <param name="user">User name joining the session.</param>
+            <param name="email">email address of the user joining the session.</param>
+            <param name="device">Device name of the user joining the session.</param>
+            <param name="tables">Array of ISmashTable for all SmashTable objects to be associated with the joined session.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.JoinSessionAsync(System.String,System.String,System.Windows.Threading.Dispatcher,System.Guid,System.String,System.String,System.String,System.Boolean,Microsoft.Hawaii.Smash.Client.ISmashTable[],System.Object)">
+            <summary>
+            Joins a Smash session. User+email+device must be unique across all joinees of a session.
+            </summary>
+            <param name="admClientId">Azure Data Market client id used for authentication.</param>
+            <param name="admClientSecret">Azure Data Market client secret used for authentication.</param>
+            <param name="dispatcher">The Dispatcher object. a dispatcher must be specified in order to use data binding with Smash.</param>
+            <param name="meetingToken">The meeting token of the session to join.</param>
+            <param name="user">User name joining the session.</param>
+            <param name="email">email address of the user joining the session.</param>
+            <param name="device">Device name of the user joining the session.</param>
+            <param name="forceRejoin">A value of 'true' overrides user+email+device uniqueness requirement for joining a session.</param>
+            <param name="tables">Array of ISmashTable for all SmashTable objects to be associated with the joined session.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.CreateSessionAsync(System.String,System.String,System.Guid,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.TimeSpan,System.Guid,System.Object)">
+            <summary>
+            Creates a new smash session.
+            </summary>
+            <param name="admClientId">Azure Data Market client id used for authentication.</param>
+            <param name="admClientSecret">Azure Data Market client secret used for authentication.</param>
+            <param name="meetingToken">The meeting token of the session to create. Needs to be shared to allow others to join the session.</param>
+            <param name="subject">The name of the session.</param>
+            <param name="organizer">The organizer of the session.</param>
+            <param name="organizerEmail">email address of organizer of session.</param>
+            <param name="attendees">List of user names allowed to join a session. A wildcard '*' matches all users attempting to join.</param>
+            <param name="lifetime">The lifetime of the session. Can be up to 30 days. The session will automatically be erased after expiration of this timespan.</param>
+            <param name="managementID">The owner's management secret required to enumerate, modify, wipe sessions.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.EnumSessionsAsync(System.String,System.String,System.Guid,System.Object)">
+            <summary>
+            Enumerates all sessions created with a management secret.
+            </summary>
+            <param name="admClientId">Azure Data Market client id used for authentication.</param>
+            <param name="admClientSecret">Azure Data Market client secret used for authentication.</param>
+            <param name="managementID">The owner's management secret required to enumerate, modify, wipe sessions.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.GetSessionInfoAsync(System.String,System.String,System.Guid,System.Guid,System.Object)">
+            <summary>
+            Gets info for a specific Smash session.
+            </summary>
+            <param name="admClientId">Azure Data Market client id used for authentication.</param>
+            <param name="admClientSecret">Azure Data Market client secret used for authentication.</param>
+            <param name="meetingToken">The meeting token of the session to get info for.</param>
+            <param name="sessionID">The session ID of the session to get info for.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.WipeSessionAsync(System.String,System.String,System.Guid,System.Guid,System.Guid,System.Object)">
+            <summary>
+            Wipes a Smash session.
+            </summary>
+            <param name="admClientId">Azure Data Market client id used for authentication.</param>
+            <param name="admClientSecret">Azure Data Market client secret used for authentication.</param>
+            <param name="meetingToken">The meeting token of the session to wipe.</param>
+            <param name="sessionID">The session ID of the session to wipe.</param>
+            <param name="managementID">The owner's management secret required to enumerate, modify, wipe sessions.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.CreateSessionAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.TimeSpan,System.Guid,System.Object)">
+            <summary>
+            Creates a new smash session.
+            </summary>
+            <param name="identity">ClientIdentity object used for authentication.</param>
+            <param name="meetingToken">The meeting token of the session to create. Needs to be shared to allow others to join the session.</param>
+            <param name="subject">The name of the session.</param>
+            <param name="organizer">The organizer of the session.</param>
+            <param name="organizerEmail">email address of organizer of session.</param>
+            <param name="attendees">List of user names allowed to join a session. A wildcard '*' matches all users attempting to join.</param>
+            <param name="lifetime">The lifetime of the session. Can be up to 30 days. The session will automatically be erased after expiration of this timespan.</param>
+            <param name="managementID">The owner's management secret required to enumerate, modify, wipe sessions.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.EnumSessionsAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Object)">
+            <summary>
+            Enumerates all sessions created with a management secret.
+            </summary>
+            <param name="identity">ClientIdentity object used for authentication.</param>
+            <param name="managementID">The owner's management secret required to enumerate, modify, wipe sessions.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.ModifySessionAsync(Microsoft.Hawaii.Smash.Client.SmashSession,System.Guid,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Object)">
+            <summary>
+            Modifies a Smash session's attendee list.
+            </summary>
+            <param name="session">Smash session object.</param>
+            <param name="managementID">The owner's management secret required to enumerate, modify, wipe sessions.</param>
+            <param name="attendeesAdd">List of user names to add.</param>
+            <param name="attendeesRemove">List of user names to delete.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.CreateBlobAsync(Microsoft.Hawaii.Smash.Client.SmashSession,System.String,System.Object)">
+            <summary>
+            Creates a blob associated with a session.
+            </summary>
+            <param name="session">A Smash session object.</param>
+            <param name="fileExtension">File extension for the blob.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.JoinSessionAsync(Microsoft.Hawaii.ClientIdentity,System.Windows.Threading.Dispatcher,System.Guid,System.String,System.String,System.String,Microsoft.Hawaii.Smash.Client.ISmashTable[],System.Object)">
+            <summary>
+            Joins a Smash session. User+email+device must be unique across all joinees of a session.
+            </summary>
+            <param name="identity">ClientIdentity object used for authentication.</param>
+            <param name="dispatcher">The Dispatcher object. a dispatcher must be specified in order to use data binding with Smash.</param>
+            <param name="meetingToken">The meeting token of the session to join.</param>
+            <param name="user">User name joining the session.</param>
+            <param name="email">email address of the user joining the session.</param>
+            <param name="device">Device name of the user joining the session.</param>
+            <param name="tables">Array of ISmashTable for all SmashTable objects to be associated with the joined session.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.JoinSessionAsync(Microsoft.Hawaii.ClientIdentity,System.Windows.Threading.Dispatcher,System.Guid,System.String,System.String,System.String,System.Boolean,Microsoft.Hawaii.Smash.Client.ISmashTable[],System.Object)">
+            <summary>
+            Joins a Smash session. User+email+device must be unique across all joinees of a session.
+            </summary>
+            <param name="identity">ClientIdentity object used for authentication.</param>
+            <param name="dispatcher">The Dispatcher object. a dispatcher must be specified in order to use data binding with Smash.</param>
+            <param name="meetingToken">The meeting token of the session to join.</param>
+            <param name="user">User name joining the session.</param>
+            <param name="email">email address of the user joining the session.</param>
+            <param name="device">Device name of the user joining the session.</param>
+            <param name="forceRejoin">A value of 'true' overrides user+email+device uniqueness requirement for joining a session.</param>
+            <param name="tables">Array of ISmashTable for all SmashTable objects to be associated with the joined session.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.GetSessionInfoAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Object)">
+            <summary>
+            Gets info for a specific Smash session.
+            </summary>
+            <param name="identity">ClientIdentity object used for authentication.</param>
+            <param name="meetingToken">The meeting token of the session to get info for.</param>
+            <param name="sessionID">The session ID of the session to get info for.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.WipeSessionAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Object)">
+            <summary>
+            Wipes (erases) all contents of a Smash session and prevents any further operation on the session.
+            </summary>
+            <param name="identity">ClientIdentity object used for authentication.</param>
+            <param name="meetingToken">The meeting token of the session to join.</param>
+            <param name="sessionID">The session ID of the session to be wiped.</param>
+            <param name="managementID">The owner's management secret required to enumerate, modify, wipe sessions.</param>
+            <param name="state">State to be passed as userState in the completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.OnJoinSessionCompleted(Microsoft.Hawaii.Smash.Client.JoinSessionCompletedArgs)">
+            <summary>
+            Event raised upon completion of JoinSessionAsync.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.OnCreateBlobCompleted(Microsoft.Hawaii.Smash.Client.CreateBlobCompletedArgs)">
+            <summary>
+            Event raised upon completion of CreateBobAsync.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.OnCreateSessionCompleted(Microsoft.Hawaii.Smash.Client.CreateSessionCompletedArgs)">
+            <summary>
+            Event raised upon completion of CreateSessionAsync.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.OnModifySessionCompleted(Microsoft.Hawaii.Smash.Client.ModifySessionCompletedArgs)">
+            <summary>
+            Event raised upon completion of ModifySessionAsync.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.OnEnumSessionsCompleted(Microsoft.Hawaii.Smash.Client.EnumSessionCompletedArgs)">
+            <summary>
+            Event raised upon completion of EnumSessionsAsync.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.OnGetSessionInfoCompleted(Microsoft.Hawaii.Smash.Client.GetSessionInfoCompletedArgs)">
+            <summary>
+            Event raised upon completion of GetSessionInfoAsync.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SessionManager.OnWipeSessionCompleted(Microsoft.Hawaii.Smash.Client.WipeSessionCompletedArgs)">
+            <summary>
+            Event raised upon completion of WipeSessionAsync.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SessionManager.JoinSessionCompleted">
+            <summary>
+            Event raised upon completion of JoinSessionAsync.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SessionManager.CreateBlobCompleted">
+            <summary>
+            Event raised upon completion of CreateBlobAsync.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SessionManager.CreateSessionCompleted">
+            <summary>
+            Event raised upon completion of CreateSessionAsync.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SessionManager.ModifySessionCompleted">
+            <summary>
+            Event raised upon completion of ModifySessionAsync.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SessionManager.EnumSessionsCompleted">
+            <summary>
+            Event raised upon completion of EnumSessionsAsync.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SessionManager.GetSessionInfoCompleted">
+            <summary>
+            Event raised upon completion of GetSessionInfoAsync.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SessionManager.WipeSessionCompleted">
+            <summary>
+            Event raised upon completion of WipeSessionAsync.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.ModifySessionCompletedArgs">
+            <summary>
+            Argument class passed to the completion handler for ModifySessionAsync.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ModifySessionCompletedArgs.#ctor(System.Exception,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the ModifySessionCompletedArgs class.
+            </summary>
+            <param name="error">null or an Exception if an error occurred.</param>
+            <param name="cancelled">true if the call has been cancelled programmatically.</param>
+            <param name="userState">The userState argument passed on the call to ModifySessionAsync.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.GetSessionInfoResponse">
+            <summary>
+            The wire representation of the GetSessionInfoAsync result.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.GetSessionInfoResponse.Session">
+            <summary>
+            Gets or sets a SessionInfo object describing the session.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.EnumSessionsAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.EnumSessionsAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.EnumSessionsAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid)">
+            <summary>
+            Initializes a new instance of the EnumSessionsAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="managementID"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.EnumSessionsAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Object)">
+            <summary>
+            Initializes a new instance of the EnumSessionsAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="managementID"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.EnumSessionsAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.EnumSessionsAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.EnumSessionsAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.EnumSessionsAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.SendRowsRequest">
+            <summary>
+            The wire representation of the method sending SmashTable record adds/updates/deletes to the Smash service.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.SendRowsRequest.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.SendRowsRequest.SessionID">
+            <summary>
+            Gets or sets the session ID of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.SendRowsRequest.ClientID">
+            <summary>
+            Gets or sets the identifier of the client.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.SendRowsRequest.RowsWire">
+            <summary>
+            Gets or sets a list of DataRows_Wire records sent to the service to reflect client side updates.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobRequest">
+            <summary>
+            The wire representation of the method used to add incremental data from a stream to a blob.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobRequest.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobRequest.SessionID">
+            <summary>
+            Gets or sets the session ID of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobRequest.ClientID">
+            <summary>
+            Gets or sets the identifier of the client.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobRequest.BlobAddress">
+            <summary>
+            Gets or sets the URI of the blob.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobRequest.BlobSharedSignature">
+            <summary>
+            Gets or sets the blob shared signature.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobRequest.Chunk">
+            <summary>
+            Gets or sets a chunk of data to be added to the blob.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobRequest.Id">
+            <summary>
+            Gets or sets an incremental id for the chunk of data to be added.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobRequest.Done">
+            <summary>
+            Gets or sets a value which indicates that this is the last chunk if set to true.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.WipeSessionCompletedArgs">
+            <summary>
+            Argument class passed to the completion handler for WipeSessionAsync.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.WipeSessionCompletedArgs.#ctor(System.Exception,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the WipeSessionCompletedArgs class.
+            </summary>
+            <param name="error">null or an Exception if an error occurred.</param>
+            <param name="cancelled">true if the call has been cancelled programmatically.</param>
+            <param name="userState">The userState argument passed on the call to WipeSessionAsync.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashClientREST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.DefaultTimeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.DefaultHostName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.CreateSessionSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.AddPageToBlobSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.CreateBlobSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.EnumSessionsSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.GetRowsSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.GetSessionInfoSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.JoinSessionSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.ModifySessionSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.SendRowsSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.WipeSessionSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.stagingConfigFileName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.stagingServiceScopeConfigFileName">
+            <summary>
+            The name of the config file that indicates what is the translater service scope.  Used only as a test hook.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.hostName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashClientREST.serviceScope">
+            <summary>
+            The service scope.  This is the private variable that is initialized on first
+            access via the GetServiceScope() method.  If a config file is present to point to a
+            staging server, that host will be stored.  Otherwise, the default is used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.CreateSessionAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.TimeSpan,System.Guid,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionName"></param>
+            <param name="ownerName"></param>
+            <param name="ownerEmail"></param>
+            <param name="attendees"></param>
+            <param name="lifetime"></param>
+            <param name="managementID"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.AddPageToBlobAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.String,System.String,System.Byte[],System.Int32,System.Boolean,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="blobAddress"></param>
+            <param name="blobSharedSignature"></param>
+            <param name="page"></param>
+            <param name="id"></param>
+            <param name="close"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.CreateBlobAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.CreateBlobResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="fileExtension"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.EnumSessionsAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.EnumSessionsResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="managementID"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.GetRowsAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Int64,System.Int32,System.Boolean,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.GetRowsResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="lastKnownRowTime"></param>
+            <param name="timeOut"></param>
+            <param name="cached"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.GetSessionInfoAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.GetSessionInfoResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.JoinSessionAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.String,System.String,System.String,System.Boolean,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.JoinSessionResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="meetingToken"></param>
+            <param name="userName"></param>
+            <param name="userEmail"></param>
+            <param name="deviceName"></param>
+            <param name="forceRejoin"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.ModifySessionAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.ModifySessionResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="managementID"></param>
+            <param name="attendeesAdd"></param>
+            <param name="attendeesRemove"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.SendRowsAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Collections.Generic.IEnumerable{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire},Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.SendRowsResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="rows"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.WipeSessionAsync(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Smash.Client.Contracts.WipeSessionResponse}.OnCompleteDelegate,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="managementID"></param>
+            <param name="onComplete"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.HandleCompletion(System.IAsyncResult,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="asyncResult"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.AbortRequest(System.IAsyncResult,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <param name="timedOut"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.GetHostName">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashClientREST.GetServiceScope">
+            <summary>
+            Returns the service scope to be used when accessing the adm OAuth service. This will generally
+            be the value generated by the DefaultServiceScope, but it can conditionally be set with
+            the presence of a config file on first access.
+            </summary>
+            <returns>A string containing the service scope.</returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashClientREST.HostName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashClientREST.ServiceScope">
+            <summary>
+            Gets the service scope to be used when accessing the adm OAuth service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.NamespaceDoc">
+            <summary>
+            The Microsoft.Hawaii.Smash.Client.Contracts namespace includes
+            service contract definitions. Users of the Windows and Windows Phone 
+            clients do not directly use these classes; they are useful for those 
+            who are developing clients for other platforms. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.GetRowsAgent">
+            <summary>
+            Class agent to get key value item by key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.GetRowsAgent.request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetRowsAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Int64,System.Int32,System.Boolean)">
+            <summary>
+            Initializes a new instance of the GetRowsAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="lastKnownRowTime"></param>
+            <param name="timeOut"></param>
+            <param name="cached"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetRowsAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.Int64,System.Int32,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the GetRowsAgent class.
+            </summary>
+            <param name="hostName"></param>
+            <param name="clientIdentity"></param>
+            <param name="meetingToken"></param>
+            <param name="sessionID"></param>
+            <param name="clientID"></param>
+            <param name="lastKnownRowTime"></param>
+            <param name="timeOut"></param>
+            <param name="cached"></param>
+            <param name="stateObject"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetRowsAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetRowsAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.GetRowsAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.GetRowsAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashTable`1">
+            <summary>
+            Generic class for a SmashTable.
+            </summary>
+            <typeparam name="T">Type of records. T must derive from SmashRecordBase.</typeparam>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.ISmashTable">
+            <summary>
+            Base interface for SmashTable&lt;T&gt;.
+            Application classes do not implement this interface.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ISmashTable.SetSession(Microsoft.Hawaii.Smash.Client.SmashSession)">
+            <summary>
+            Attaches a SmashSession to a SmashTable.
+            This is used internally by Smash and applications should not call this API.
+            </summary>
+            <param name="s">the SmashSession to attach the SmashTable to.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ISmashTable.GetState(System.Collections.Generic.List{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire})">
+            <summary>
+            Gets serialable state from the derived SmashTable for application hibernation.
+            This is used internally by Smash and applications should not call this API.
+            </summary>
+            <param name="rows">A List to which serialized record data is appended.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.ISmashTable.PrepareSendRecord(System.Guid,System.Guid,System.Int64,Microsoft.Hawaii.Smash.Client.Common.SendRowAction,System.Int32,System.Byte[])">
+            <summary>
+            Internal method used by Smash to synchronize table state with state shared by the Smash service.
+            This is used internally by Smash and applications should not call this API.
+            </summary>
+            <param name="recordID">Record ID</param>
+            <param name="creatorClient">ID of the creator client</param>
+            <param name="timeStamp">Time stamp</param>
+            <param name="action">action for rows</param>
+            <param name="modificationFlag">modification flag</param>
+            <param name="blob">blob to prepare</param>
+            <returns>Action to take</returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.ISmashTable.TypeHash">
+            <summary>
+            Unique identifying hash of the derived SmashTable's type and name.
+            This is used internally by Smash and applications should not call this API.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTable`1.ModHash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTable`1.session">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTable`1.typeHash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashTable`1.SyncRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTable`1.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the SmashTable class.
+            (T,name) must be unique for all SmashTable joined to a single session.
+            </summary>
+            <param name="name">The name of the table.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTable`1.GetTableChangeContext">
+            <summary>
+            Get a change context
+            </summary>
+            <returns>The change context used to modify the table</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTable`1.Microsoft#Hawaii#Smash#Client#ISmashTable#SetSession(Microsoft.Hawaii.Smash.Client.SmashSession)">
+            <summary>
+            Smash uses this internally to associate a SmashTable with a session. Applications do not use this directly.
+            </summary>
+            <param name="session"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTable`1.Microsoft#Hawaii#Smash#Client#ISmashTable#GetState(System.Collections.Generic.List{Microsoft.Hawaii.Smash.Client.Common.DataRow_Wire})">
+            <summary>
+            Smash uses this internally to capture tombstone state for a session. Applications do not use this directly.
+            </summary>
+            <param name="rows"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTable`1.Microsoft#Hawaii#Smash#Client#ISmashTable#PrepareSendRecord(System.Guid,System.Guid,System.Int64,Microsoft.Hawaii.Smash.Client.Common.SendRowAction,System.Int32,System.Byte[])">
+            <summary>
+            Internal method used by Smash to synchronize table state with state shared by the Smash service.
+            This is used internally by Smash and applications should not call this API.
+            </summary>
+            <param name="recordID"></param>
+            <param name="creatorClient"></param>
+            <param name="timeStamp"></param>
+            <param name="action"></param>
+            <param name="modificationFlag"></param>
+            <param name="blob"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashTable`1.GetNameHash(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.SmashTable`1.Microsoft#Hawaii#Smash#Client#ISmashTable#TypeHash">
+            <summary>
+            Gets the hash of (T,name) of the SmashTable. Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.UploadCompletedHandler">
+            <summary>
+            Delegate type for completion handler of UploadAsync.
+            </summary>
+            <param name="sender">The SmashBlobUploader instance calling the completion handler.</param>
+            <param name="e">The completion arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.UploadProgressHandler">
+            <summary>
+            Delegate type for progress handler of UploadAsync.
+            </summary>
+            <param name="sender">The SmashBlobUploader instance calling the completion handler.</param>
+            <param name="e">The progress arguments.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SmashBlobUploader">
+            <summary>
+            Helper to asynchronously upload blob data from a stream. The object is obtained from the completion args of SessionManager.CreateBlobAsync.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.meetingToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.sessionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.clientID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.blobAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.blobSharedSignature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.identity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.#ctor(Microsoft.Hawaii.ClientIdentity,System.Guid,System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the SmashBlobUploader class.
+            </summary>
+            <param name="identity"></param>
+            <param name="m"></param>
+            <param name="s"></param>
+            <param name="c"></param>
+            <param name="address"></param>
+            <param name="signature"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.UploadAsync(System.IO.Stream,System.Object)">
+            <summary>
+            Initiates async upload of blob data from a stream.
+            </summary>
+            <param name="stream">Stream containing data to be uploaded.</param>
+            <param name="state">State to be passed as userState in the progress and completion event args.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.OnUploadCompleted(Microsoft.Hawaii.Smash.Client.UploadCompletedArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.OnUploadProgress(Microsoft.Hawaii.Smash.Client.UploadProgressArgs)">
+            <summary>
+            
+            </summary>
+            <param name="progress"></param>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.UploadCompleted">
+            <summary>
+            Event raised upon completion of UploadAsync.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Hawaii.Smash.Client.SmashBlobUploader.UploadProgress">
+            <summary>
+            Event raised indicating progress of UploadAsync.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionRequest">
+            <summary>
+            The wire representation of the CreateSessionAsync call.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionRequest.MeetingToken">
+            <summary>
+            Gets or sets the meeting token of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionRequest.SessionName">
+            <summary>
+            Gets or sets the name of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionRequest.OwnerName">
+            <summary>
+            Gets or sets the organizer of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionRequest.OwnerEmail">
+            <summary>
+            Gets or sets email address of organizer of the session.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionRequest.Attendees">
+            <summary>
+            Gets or sets list of user names allowed to join a session. A wildcard '*' matches all users attempting to join.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionRequest.Lifetime">
+            <summary>
+            Gets or sets the lifetime of the session. Can be up to 30 days. The session will automatically be erased after expiration of this timespan.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Contracts.CreateSessionRequest.ManagementID">
+            <summary>
+            Gets or sets the owner's management secret required to enumerate, modify, wipe sessions.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Contracts.AddPageToBlobResponse">
+            <summary>
+            The wire representation of the AddPageToBlobAsync result.
+            Applications do not use this directly.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.SaveChangesCompletedArgs">
+            <summary>
+            Argument class passed to the completion handler for SaveChangesAsync.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.SaveChangesCompletedArgs.#ctor(System.Exception,System.Boolean,System.Object)">
+            <summary>
+            Initializes a new instance of the SaveChangesCompletedArgs class.
+            </summary>
+            <param name="error">null or an Exception if an error occurred.</param>
+            <param name="cancelled">true if the call has been cancelled programmatically.</param>
+            <param name="userState">The userState argument passed on the call to SaveChangesAsync.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Smash.Client.Common.RowDeduper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.lastUsedTimeInSeconds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.transferLastTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.transferMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.base2010">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.known">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.history">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the RowDeduper class
+            </summary>
+            <param name="id"></param>
+            <param name="keepHistory"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.Known(System.Guid,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <param name="timeStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.Add(System.Guid,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <param name="timeStamp"></param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.SignalTransferStart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.ApplyTTL(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="lastKnownRowTime"></param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.Age">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.TransferLastTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.TransferMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.LastUsedTimeInSeconds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Smash.Client.Common.RowDeduper.NowInSeconds">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

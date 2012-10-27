@@ -1,0 +1,7 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="RendezvousSampleApp" EntryPointType="RendezvousSampleApp.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="RendezvousSampleApp" Source="RendezvousSampleApp.dll" />
+    <AssemblyPart x:Name="Microsoft.Hawaii.ClientBase" Source="Microsoft.Hawaii.ClientBase.dll" />
+    <AssemblyPart x:Name="Microsoft.Hawaii.Rendezvous.Client" Source="Microsoft.Hawaii.Rendezvous.Client.dll" />
+  </Deployment.Parts>
+</Deployment>

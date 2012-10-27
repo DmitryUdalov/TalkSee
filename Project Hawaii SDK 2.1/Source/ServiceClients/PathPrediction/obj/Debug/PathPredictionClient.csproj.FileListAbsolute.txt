@@ -1,0 +1,10 @@
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\Bin\Debug\Microsoft.Hawaii.PathPrediction.Client.XML
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\Bin\Debug\Microsoft.Hawaii.PathPrediction.Client.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\Bin\Debug\Microsoft.Hawaii.PathPrediction.Client.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\Bin\Debug\Microsoft.Hawaii.ClientBase.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\Bin\Debug\System.Data.Services.Client.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\Bin\Debug\Microsoft.Hawaii.ClientBase.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\Bin\Debug\Microsoft.Hawaii.ClientBase.xml
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\obj\Debug\Microsoft.Hawaii.PathPrediction.Client.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\PathPrediction\obj\Debug\Microsoft.Hawaii.PathPrediction.Client.pdb

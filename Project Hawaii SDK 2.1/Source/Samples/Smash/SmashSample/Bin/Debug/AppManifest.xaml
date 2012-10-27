@@ -1,0 +1,7 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="SmashSampleApp" EntryPointType="SmashSampleApp.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="SmashSampleApp" Source="SmashSampleApp.dll" />
+    <AssemblyPart x:Name="Microsoft.Hawaii.ClientBase" Source="Microsoft.Hawaii.ClientBase.dll" />
+    <AssemblyPart x:Name="Microsoft.Hawaii.Smash.Client" Source="Microsoft.Hawaii.Smash.Client.dll" />
+  </Deployment.Parts>
+</Deployment>

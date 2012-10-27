@@ -1,0 +1,1069 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Hawaii.Relay.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Hawaii.Relay.Client.DeleteEndPointAgent">
+            <summary>
+            Class agent to delete and endpoint.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.DeleteEndPointAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint)">
+            <summary>
+            Initializes a new instance of the DeleteEndPointAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="endpoint">Specifies an endpoint to delete.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.DeleteEndPointAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,System.Object)">
+            <summary>
+            Initializes a new instance of the DeleteEndPointAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="endpoint">Specifies an endpoint to delete.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.DeleteEndPointAgent.CreateServiceUri(System.String,Microsoft.Hawaii.Relay.Client.Endpoint)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="endpoint">Specifies an endpoint to delete.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.GroupResult">
+            <summary>
+            Class to carry the results of relay service invocation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.GroupResult.Group">
+            <summary>
+             Gets the group object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.SendMessageAgent">
+            <summary>
+            Class agent to send message to recipients.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.SendMessageAgent.message">
+            <summary>
+            Byte array to hold the message
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.SendMessageAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,System.Byte[],System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the SendMessageAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="fromEndPoint">Specifies an from end point.</param>
+            <param name="recipientIds">Specifies recipient (either endpoint or group) ids.</param>
+            <param name="message">Specifies an message data to be sent.</param>
+            <param name="timeout">The message time-to-live.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.SendMessageAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,System.Byte[],System.TimeSpan,System.Object)">
+            <summary>
+            Initializes a new instance of the SendMessageAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="fromEndPoint">Specifies an from end point.</param>
+            <param name="recipientIds">Specifies recipient (either endpoint or group) ids.</param>
+            <param name="message">Specifies an message data to be sent.</param>
+            <param name="timeout">The message time-to-live.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.SendMessageAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.SendMessageAgent.CreateServiceUri(System.String,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,System.TimeSpan)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="fromEndPoint">Specifies an from end point.</param>
+            <param name="recipientIds">Specifies recipient (either endpoint or group) ids.</param>
+            <param name="timeout">The message time-to-live.</param>
+            <returns>A valid service uri object.</returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.DeleteGroupAgent">
+            <summary>
+            Class agent to delete a group.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.DeleteGroupAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Group)">
+            <summary>
+            Initializes a new instance of the DeleteGroupAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="group">Specifies a group to be deleted.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.DeleteGroupAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Group,System.Object)">
+            <summary>
+            Initializes a new instance of the DeleteGroupAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="group">Specifies a group to be deleted.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.DeleteGroupAgent.CreateServiceUri(System.String,Microsoft.Hawaii.Relay.Client.Group)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="group">Specifies a group to be deleted.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.NamespaceDoc">
+            <summary>
+            The Microsoft.Hawaii.Relay.Client namespace contains classes for sending and
+            receiving messages through the Hawaii Relay Service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.RelayStorage">
+            <summary>
+            Helper class to store Endpoint id and secret key into the mobile's 
+            isolated storage for endpoint persistence purpose.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayStorage.ValueSeperator">
+            <summary>Value separator </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayStorage.ObjectSeperator">
+            <summary>Object separator </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayStorage.EndpointKey">
+            <summary>Endpoint key</summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayStorage.CreatedGroupsKey">
+            <summary>Created group key</summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayStorage.JoinedGroupsKey">
+            <summary>Joined groups key</summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayStorage.MessagesKey">
+            <summary>Messages key</summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayStorage.ContainerName">
+            <summary>Container name for App Relay Endpoint ids</summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.SaveEndpoint(Microsoft.Hawaii.Relay.Client.Endpoint)">
+            <summary>
+            Helper method to store the endpoint.
+            </summary>
+            <param name="endpoint">A valid endpoint.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.ReadEndpoint">
+            <summary>
+            Hepler method to create endpoint using stored endpoint values.
+            </summary>
+            <returns>An endpoint.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.SaveGroups(Microsoft.Hawaii.Relay.Client.Groups)">
+            <summary>
+            Method to read groups.
+            </summary>
+            <param name="groups">Specifies a groups object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.ReadGroups">
+            <summary>
+            Method to read groups.
+            </summary>
+            <returns>A valid groups object.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.SaveMessages(System.Collections.Generic.List{Microsoft.Hawaii.Relay.Client.Message})">
+            <summary>
+            Method to save messages.
+            </summary>
+            <param name="messages">Specifies a list of messages.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.ReadMessages">
+            <summary>
+            Method to read messages.
+            </summary>
+            <returns>List of messages.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.SaveGroups(System.String,Microsoft.Hawaii.Relay.Client.Groups)">
+            <summary>
+            Method saves the groups into the storage.
+            </summary>
+            <param name="key">Specifies a key to store.</param>
+            <param name="groups">Specifies a groups object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.ReadGroups(System.String)">
+            <summary>
+            Method reads groups from storage.
+            </summary>
+            <param name="key">Specifies a key to read.</param>
+            <returns>A Groups object.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.SaveMessages(System.String,System.Collections.Generic.List{Microsoft.Hawaii.Relay.Client.Message})">
+            <summary>
+            Method saves string values of messages into the storage.
+            </summary>
+            <param name="key">Specifies a key to store value.</param>
+            <param name="messages">Specifies a list of messages.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.ReadMessages(System.String)">
+            <summary>
+            Method read messages from storage.
+            </summary>
+            <param name="key">Specifies a key to read.</param>
+            <returns>List of message object.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.GetValue(System.String)">
+            <summary>
+            Gets a value for specified key from isolated storage.
+            </summary>
+            <returns>An endpoint object.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.SetValue(System.String,System.String)">
+            <summary>
+            Stores a value into Isolated storage.
+            </summary>
+            <param name="key">Specifies a key.</param>
+            <param name="value">Specifies a value.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayStorage.RemoveKey(System.String)">
+            <summary>
+            Helper method removes the key.
+            </summary>
+            <param name="key">Specifies a key.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.Groups">
+            <summary>
+            A container class for Group objects.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.Groups.items">
+            <summary>
+            List field to store the Group items.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Groups.#ctor">
+            <summary>
+            Initializes a new instance of the Groups class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Groups.Add(Microsoft.Hawaii.Relay.Client.Group)">
+            <summary>
+            Method top add a Group object into the container.
+            </summary>
+            <param name="group">
+            A valid group object.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Groups.Exists(System.String)">
+            <summary>
+            Method to check whether a group exists in the container.
+            </summary>
+            <param name="groupId">
+            Id of the Group object to find.
+            </param>
+            <returns>
+            Returns 'true' if the container contains group item, other 'false'.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Groups.Find(System.String)">
+            <summary>
+            Method to retrieve a Group item from the container.
+            </summary>
+            <param name="groupId">
+            Specifies a group id.
+            </param>
+            <returns>
+            A valid Group object.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Groups.Remove(System.String)">
+            <summary>
+            Method to remove a group from the container based on its id.
+            </summary>
+            <param name="groupId">
+            Id of the Group object to be removed.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Groups.Clear">
+            <summary>
+            Clears all item from the container.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Groups.GetEnumerator">
+            <summary>
+            Enumerator for groups class.
+            </summary>
+            <returns>
+            IEnumerator object.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Groups.GetGroup(System.Int32)">
+            <summary>
+            Gets a group object from the list of items
+            </summary>
+            <param name="index">index of the object in the items list to get</param>
+            <returns>a group object</returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Groups.Count">
+            <summary>
+            Gets the number of items.
+            </summary>
+            <returns>No of items (groups).</returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Groups.Item(System.Int32)">
+            <summary>
+            Gets the index group item.
+            </summary>
+            <param name="index">A Index index.</param>
+            <returns>A valid group item.</returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.MessagingResult">
+            <summary>
+            Class to carry the results of relay service invocation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.MessagingResult.Messages">
+            <summary>
+             Gets the messages.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.JoinGroupAgent">
+            <summary>
+            Class agent to join a group.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.JoinGroupAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group)">
+            <summary>
+            Initializes a new instance of the JoinGroupAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="endpoint">Specifies an endpoint to join a group.</param>
+            <param name="group">Specifies a target group.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.JoinGroupAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group,System.Object)">
+            <summary>
+            Initializes a new instance of the JoinGroupAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="endpoint">Specifies an endpoint to join a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <param name="stateObject">Specifies user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.JoinGroupAgent.CreateServiceUri(System.String,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="endpoint">Specifies an endpoint to join a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.EndpointResult">
+            <summary>
+            Class to carry the results of relay service invocation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.EndpointResult.EndPoint">
+            <summary>
+            Gets the endpoint.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.Group">
+            <summary>
+            Represents a multicast group of communications endpoints.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Group.RegistrationId">
+            <summary>
+            Gets or sets the registration id assigned to this group by the relay service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Group.Name">
+            <summary>
+            Gets or sets the name of the group.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Group.SecretKey">
+            <summary>
+            Gets or sets the secret key used to authenticate requests operating on this group
+            to the relay service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.CreateEndPointAgent">
+            <summary>
+            Class agent to create a new end point.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.CreateEndPointAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the CreateEndPointAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="name">Specifies a name of the test client.</param>
+            <param name="timeout">Specifies a timeout value.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.CreateEndPointAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String,System.TimeSpan,System.Object)">
+            <summary>
+            Initializes a new instance of the CreateEndPointAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="name">Specifies a name of the test client.</param>
+            <param name="timeout">Specifies a timeout value.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.CreateEndPointAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.CreateEndPointAgent.CreateServiceUri(System.String,System.String,System.TimeSpan)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="name">Specifies a name of the test client.</param>
+            <param name="timeout">Specifies a timeout value.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.Message">
+            <summary>
+            Represents a message received from the relay service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Message.#ctor">
+            <summary>
+            Initializes a new instance of the Message class from params.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Message.#ctor(System.String,System.String,System.Byte[])">
+            <summary>
+            Initializes a new instance of the Message class from params.
+            </summary>
+            <param name="from">Sender of the message.</param>
+            <param name="to">Recepient of the message.</param>
+            <param name="body">Body of the message.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Message.#ctor(System.Xml.XmlReader)">
+            <summary>
+            Initializes a new instance of the Message class from data
+            read from an XML stream.
+            </summary>
+            <param name="reader">The XmlReader for the XML data.</param>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Message.Valid">
+            <summary>
+            Gets or sets a value indicating whether or not the message was constructed properly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Message.From">
+            <summary>
+            Gets or sets a registration id of the sender of this message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Message.To">
+            <summary>
+            Gets or sets a registration id(s) of the recipient(s) of this message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Message.Body">
+            <summary>
+            Gets or sets the message body.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.ReceiveMessagesAgent">
+            <summary>
+            Class agent to received all endpoint messages from service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.ReceiveMessagesAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the ReceiveMessagesAgent class.
+            </summary>
+            <param name="hostName">
+            Specifies a host name of the service.
+            </param>
+            <param name="clientIdentity">
+            Specifies the client identity.
+            </param>
+            <param name="endpoint">
+            Specifies an endpoint to leave a group.
+            </param>
+            <param name="filter">
+            Specifies a list of registration ids  for Endpoints and/or Groups that
+            identify senders and/or group recipients of desired messages.
+            </param>
+            <param name="wait">
+            The time to wait for a message.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.ReceiveMessagesAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,System.TimeSpan,System.Object)">
+            <summary>
+            Initializes a new instance of the ReceiveMessagesAgent class.
+            </summary>
+            <param name="hostName">
+            Specifies a host name of the service.
+            </param>
+            <param name="clientIdentity">
+            Specifies the client identity.
+            </param>
+            <param name="endpoint">
+            Specifies an endpoint to leave a group.
+            </param>
+            <param name="filter">
+            Specifies a list of registration ids  for Endpoints and/or Groups that
+            identify senders and/or group recipients of desired messages.
+            </param>
+            <param name="wait">
+            The time to wait for a message.
+            </param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.ReceiveMessagesAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.ReceiveMessagesAgent.CreateServiceUri(System.String,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,System.TimeSpan)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="endpoint">Specifies an endpoint to join a group.</param>
+            <param name="filter">
+            Specifies a list of registration ids  for Endpoints and/or Groups that
+            identify senders and/or group recipients of desired messages.
+            </param>
+            <param name="wait">The time to wait for a message.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.CreateGroupAgent">
+            <summary>
+            Class agent to create a new group.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.CreateGroupAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the CreateGroupAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="timeout">Specifies a time span to live.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.CreateGroupAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.TimeSpan,System.Object)">
+            <summary>
+            Initializes a new instance of the CreateGroupAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="timeout">Specifies a time span to live.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.CreateGroupAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.CreateGroupAgent.CreateServiceUri(System.String,System.TimeSpan)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="timeout">Specifies a time span to live.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.LeaveGroupAgent">
+            <summary>
+            Class agent to leave a group.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.LeaveGroupAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group)">
+            <summary>
+            Initializes a new instance of the LeaveGroupAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="endpoint">Specifies an endpoint to leave a group.</param>
+            <param name="group">Specifies a target group.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.LeaveGroupAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group,System.Object)">
+            <summary>
+            Initializes a new instance of the LeaveGroupAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="endpoint">Specifies an endpoint to leave a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.LeaveGroupAgent.CreateServiceUri(System.String,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="endpoint">Specifies an endpoint to join a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.RelayService">
+            <summary>
+            Helper class that provides access to the Relay service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.DefaultHostName">
+            <summary>
+            Specifies the default service host name. This will be used to create the service url.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.EndPointSignature">
+            <summary>
+            Specifies a signature for the REST methods that manage endpoints.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.GroupSignature">
+            <summary>
+            Specifies a signature for the REST methods that manage groups.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.NameKey">
+            <summary>
+            Query string key for name.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.TtlKey">
+            <summary>
+            Query string key for timeout.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.ToKey">
+            <summary>
+            Query string key for to.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.FilterKey">
+            <summary>
+            Query string key for filter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.WaitKey">
+            <summary>
+            Query string key for wait.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.StagingConfigFileName">
+            <summary>
+            The name of the config file that indicates where the Relay staging service is located.  Used only as a test hook.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.hostName">
+            <summary>
+            The service host name.  This is the private variable that is initialized on first
+            access via the ServiceScope get accessor.  If a config file is present to point to a
+            staging server, that host will be stored.  Otherwise, the default is used.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Relay.Client.RelayService.serviceScope">
+            <summary>
+            The service scope.  This is the private variable that is initialized on first
+            access via the GetServiceScope() method.  If a config file is present to point to a
+            staging server, that host will be stored.  Otherwise, the default is used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateEndPointAsync(System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.EndpointResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates an endpoint.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="name">Specifies a name of the client.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateEndPointAsync(System.String,System.String,System.TimeSpan,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.EndpointResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates an endpoint.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="name">Specifies a name of the client.</param>
+            <param name="ttl">Specifies the time to live on the server</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.DeleteEndPointAsync(System.String,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.EndpointResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that deletes an endpoint.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="endpoint">Specifies an endpoint.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.JoinGroupAsync(System.String,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will join an endpoint to a group.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="endpoint">Specifies an endpoint to join a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.LeaveGroupAsync(System.String,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will have an endpoint leave from a group.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="endpoint">Specifies an endpoint to leave a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.SendMessageAsync(System.String,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,System.Byte[],Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.MessagingResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will send a message.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="fromEndPoint">Specifies an from end point.</param>
+            <param name="recipientIds">Specifies the recipients (either endpoint or group) ids.</param>
+            <param name="message">Specifies an message data to be sent.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.ReceiveMessagesAsync(System.String,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.MessagingResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will receive a message.
+            </summary>
+            <param name="hawaiiAppId">
+            Specifies the Hawaii Application Id.
+            </param>
+            <param name="endpoint">
+            Specifies an endpoint to leave a group.
+            </param>
+            <param name="filter">
+            Specifies a list of registration ids for Endpoints and/or Groups that
+            identify senders and/or group recipients of desired messages.
+            </param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateGroupAsync(System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates a new group.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateGroupAsync(System.String,System.TimeSpan,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates a new group.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="ttl">Specifies the time to live in the service</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.DeleteGroupAsync(System.String,Microsoft.Hawaii.Relay.Client.Group,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that deletes a group.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="group">Specifies a group to be deleted.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateEndPointAsync(System.String,System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.EndpointResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates an endpoint.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="name">Specifies a name of the client.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateEndPointAsync(System.String,System.String,System.String,System.TimeSpan,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.EndpointResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates an endpoint.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="name">Specifies a name of the client.</param>
+            <param name="ttl">Specifies the time to live on the server</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.DeleteEndPointAsync(System.String,System.String,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.EndpointResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that deletes an endpoint.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="endpoint">Specifies an endpoint.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.JoinGroupAsync(System.String,System.String,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will join an endpoint to a group.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="endpoint">Specifies an endpoint to join a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.LeaveGroupAsync(System.String,System.String,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will have an endpoint leave from a group.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="endpoint">Specifies an endpoint to leave a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.SendMessageAsync(System.String,System.String,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,System.Byte[],Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.MessagingResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will send a message.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="fromEndPoint">Specifies an from end point.</param>
+            <param name="recipientIds">Specifies the recipients (either endpoint or group) ids.</param>
+            <param name="message">Specifies an message data to be sent.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.ReceiveMessagesAsync(System.String,System.String,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.MessagingResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will receive a message.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.
+            Specifies the Hawaii Application Id.
+            </param>
+            <param name="endpoint">
+            Specifies an endpoint to leave a group.
+            </param>
+            <param name="filter">
+            Specifies a list of registration ids for Endpoints and/or Groups that
+            identify senders and/or group recipients of desired messages.
+            </param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateGroupAsync(System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates a new group.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateGroupAsync(System.String,System.String,System.TimeSpan,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates a new group.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="ttl">Specifies the time to live in the service</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.DeleteGroupAsync(System.String,System.String,Microsoft.Hawaii.Relay.Client.Group,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that deletes a group.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="group">Specifies a group to be deleted.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateEndPointAsync(Microsoft.Hawaii.ClientIdentity,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.EndpointResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates an endpoint.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="name">Specifies a name of the client.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateEndPointAsync(Microsoft.Hawaii.ClientIdentity,System.String,System.TimeSpan,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.EndpointResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates an endpoint.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="name">Specifies a name of the client.</param>
+            <param name="ttl">Specifies the time to live on the server</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.DeleteEndPointAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.EndpointResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that deletes an endpoint.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="endpoint">Specifies an endpoint.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.JoinGroupAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will join an endpoint to a group.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="endpoint">Specifies an endpoint to join a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.LeaveGroupAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,Microsoft.Hawaii.Relay.Client.Group,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will have an endpoint leave from a group.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="endpoint">Specifies an endpoint to leave a group.</param>
+            <param name="group">Specifies a target group.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.SendMessageAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,System.Byte[],Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.MessagingResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will send a message.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="fromEndPoint">Specifies an from end point.</param>
+            <param name="recipientIds">Specifies the recipients (either endpoint or group) ids.</param>
+            <param name="message">Specifies an message data to be sent.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.ReceiveMessagesAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Endpoint,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.MessagingResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that will receive a message.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="endpoint">Specifies an endpoint to leave a group.</param>
+            <param name="filter">
+            Specifies a list of registration ids for Endpoints and/or Groups that
+            identify senders and/or group recipients of desired messages.
+            </param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateGroupAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates a new group.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.CreateGroupAsync(Microsoft.Hawaii.ClientIdentity,System.TimeSpan,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that creates a new group.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="ttl">Specifies the time to live in the service</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.DeleteGroupAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Relay.Client.Group,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Relay.Client.GroupResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to initiate the call that deletes a group.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="group">Specifies a group to be deleted.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.RelayService.GetHostName">
+            <summary>
+            Returns the Host Name to be used when accessing the service.  This will generally
+            be the value specified in the DefaultHostName, but it can conditionally be set with
+            the presence of a config file on first access.
+            </summary>
+            <returns>A string containing the host name of the service</returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.RelayService.HostName">
+            <summary>
+            Gets the Host Name to be used when accessing the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.RelayService.ServiceScope">
+            <summary>
+            Gets the service scope to be used when accessing the adm OAuth service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Relay.Client.Endpoint">
+            <summary>
+            Represents a communications endpoint of the relay service.
+            </summary>
+            <remarks>
+            An endpoint is used to send and receive messages through the relay
+            service.  It is uniquely identified by its
+            <see cref="P:Microsoft.Hawaii.Relay.Client.Endpoint.RegistrationId"/>, which is automatically generated upon
+            its creation.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Hawaii.Relay.Client.Endpoint.#ctor">
+            <summary>
+            Initializes a new instance of the Endpoint class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Endpoint.RegistrationId">
+            <summary>
+            Gets or sets the registration id assigned to this endpoint by the relay service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Endpoint.SecretKey">
+            <summary>
+            Gets or sets the secret key used to authenticate requests operating on this endpoint
+            to the relay service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Relay.Client.Endpoint.Groups">
+            <summary>
+            Gets or sets the group container to hold groups of this end point.
+            </summary>
+        </member>
+    </members>
+</doc>

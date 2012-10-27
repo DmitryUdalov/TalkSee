@@ -1,0 +1,103 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="TranslatorSampleApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"        
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <controls:Pivot Name="TranslatorMode" Title="Translator Client">
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Translate">
+                <Grid>
+                    <toolkit:ListPicker Name="PickerLanguageFrom" ExpansionMode="FullScreenOnly"  Height="53" Margin="12,23,9,531" Width="435" FullModeHeader="Select language to translate from">
+                        <toolkit:ListPicker.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Translated from : "></TextBlock>
+                                <TextBlock Text="{Binding Name}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.ItemTemplate>
+                        <toolkit:ListPicker.FullModeItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" Margin="12" FontSize="{StaticResource PhoneFontSizeLarge}" FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                            </DataTemplate>
+                        </toolkit:ListPicker.FullModeItemTemplate>
+                    </toolkit:ListPicker>
+
+
+                    <toolkit:ListPicker Name="PickerLanguageTo" ExpansionMode="FullScreenOnly"  Height="53" Margin="12,277,9,277" Width="435"  FullModeHeader="Select language to translate to">
+                        <toolkit:ListPicker.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Translated to : "></TextBlock>
+                                    <TextBlock Text="{Binding Name}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.ItemTemplate>
+                        <toolkit:ListPicker.FullModeItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" Margin="12" FontSize="{StaticResource PhoneFontSizeLarge}" FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                            </DataTemplate>
+                        </toolkit:ListPicker.FullModeItemTemplate>
+                    </toolkit:ListPicker>
+                    
+                    <TextBox Height="191" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0,71,0,0" Name="tbTextTranslatedFrom" Text="" VerticalAlignment="Top" Width="460" />
+                    <TextBox Height="191" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="-1,325,0,0" Name="tbTextTranslatedTo" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="460" />
+                    <Button Content="Translate" Height="72" HorizontalAlignment="Left" Margin="298,519,0,0" Name="btnTranslate" VerticalAlignment="Top" Width="160" Click="BtnTranslate_Click" />
+                    <ProgressBar IsIndeterminate="True" Visibility="Collapsed"  Name="progressBar" ></ProgressBar>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Pivot item one-->
+            <controls:PivotItem Header="Speech">
+                <Grid>
+                    <toolkit:ListPicker ExpansionMode="FullScreenOnly" FullModeHeader="Select language to translate from" Height="53" Margin="12,10,9,544" Name="PickerLanguageSpeakTo" Width="435">
+                        <toolkit:ListPicker.FullModeItemTemplate>
+                            <DataTemplate>
+                                <TextBlock FontFamily="{StaticResource PhoneFontFamilyLight}" FontSize="{StaticResource PhoneFontSizeLarge}" Margin="12" Text="{Binding Name}" />
+                            </DataTemplate>
+                        </toolkit:ListPicker.FullModeItemTemplate>
+                        <toolkit:ListPicker.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Speak in : " />
+                                    <TextBlock Text="{Binding Name}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.ItemTemplate>
+                    </toolkit:ListPicker>
+                    <TextBox TextWrapping="Wrap" Height="191" HorizontalAlignment="Left" Margin="0,58,0,0" Name="tbTextSpeak" Text="" VerticalAlignment="Top" Width="460" />
+                    <Button Content="Speak" Height="72" HorizontalAlignment="Left" Margin="299,255,0,0" Name="btnSpeak" VerticalAlignment="Top" Width="160" Click="BtnSpeak_Click" />
+                    <MediaElement Height="120" HorizontalAlignment="Left" Margin="124,269,0,0" Name="soundPlayer" VerticalAlignment="Top" Width="160" />
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton x:Name="appbar_button2" IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItem2" Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+    
+</phone:PhoneApplicationPage>

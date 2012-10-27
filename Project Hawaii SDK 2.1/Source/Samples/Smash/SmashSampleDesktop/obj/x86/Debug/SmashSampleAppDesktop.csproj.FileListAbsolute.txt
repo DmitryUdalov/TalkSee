@@ -1,0 +1,16 @@
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\bin\Debug\SmashAppDesktop.exe.config
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\bin\Debug\SmashAppDesktop.exe
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\bin\Debug\SmashAppDesktop.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\bin\Debug\Microsoft.Hawaii.Smash.ClientDesktop.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\bin\Debug\Microsoft.Hawaii.Smash.ClientDesktop.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\MainWindow.baml
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\MainWindow.g.cs
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\App.g.cs
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\SmashAppDesktop_MarkupCompile.cache
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\SmashAppDesktop.g.resources
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\SmashSampleAppDesktop.Properties.Resources.resources
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\SmashAppDesktop.exe
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\Samples\Smash\SmashSampleDesktop\obj\x86\Debug\SmashAppDesktop.pdb

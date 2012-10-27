@@ -1,0 +1,65 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PathPredictionSample.MapLegendPage"
+    xmlns:my="clr-namespace:PathPredictionSample"  
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:m="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <ScrollViewer>
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,0,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Fill Me Up" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Legend" Margin="9,-7,0,20" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="40,0,12,0">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+                <my:Pulsar Grid.Row="0" Grid.Column="0" Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" FontSize="18" >
+                    Your current location
+                </TextBlock>
+
+                <my:Pulsar Grid.Row="1" Grid.Column="0" Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center" Radius="1" LightColor="Gray" DarkColor="DarkGray" Opacity="0.6" />
+                <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,0,14" FontSize="18">
+                    The points along your trip.  A new one is created approximately every 50 feet.
+                </TextBlock>
+
+                <my:Pulsar Grid.Row="2" Grid.Column="0" Margin="15" VerticalAlignment="Center" LightColor="Yellow" DarkColor="Orange" HorizontalAlignment="Center" />
+                <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,0,14" FontSize="18">
+                    The predicted location.  If you are not moving your destination can not be predicted and this marker will not be visible.
+                </TextBlock>
+
+            </Grid>
+    </Grid>
+    </ScrollViewer>
+
+</phone:PhoneApplicationPage>

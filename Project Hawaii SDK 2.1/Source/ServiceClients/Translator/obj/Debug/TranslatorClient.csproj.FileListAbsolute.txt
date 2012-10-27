@@ -1,0 +1,9 @@
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Translator\Bin\Debug\Microsoft.Hawaii.Translator.Client.XML
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Translator\Bin\Debug\Microsoft.Hawaii.Translator.Client.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Translator\Bin\Debug\Microsoft.Hawaii.Translator.Client.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Translator\Bin\Debug\Microsoft.Hawaii.ClientBase.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Translator\Bin\Debug\Microsoft.Hawaii.ClientBase.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Translator\Bin\Debug\Microsoft.Hawaii.ClientBase.xml
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Translator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Translator\obj\Debug\Microsoft.Hawaii.Translator.Client.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Translator\obj\Debug\Microsoft.Hawaii.Translator.Client.pdb

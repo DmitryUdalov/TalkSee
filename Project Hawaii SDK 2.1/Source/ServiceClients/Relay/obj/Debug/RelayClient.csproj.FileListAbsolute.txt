@@ -1,0 +1,9 @@
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Relay\Bin\Debug\Microsoft.Hawaii.Relay.Client.xml
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Relay\Bin\Debug\Microsoft.Hawaii.Relay.Client.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Relay\Bin\Debug\Microsoft.Hawaii.Relay.Client.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Relay\Bin\Debug\Microsoft.Hawaii.ClientBase.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Relay\Bin\Debug\Microsoft.Hawaii.ClientBase.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Relay\Bin\Debug\Microsoft.Hawaii.ClientBase.xml
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Relay\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Relay\obj\Debug\Microsoft.Hawaii.Relay.Client.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Relay\obj\Debug\Microsoft.Hawaii.Relay.Client.pdb

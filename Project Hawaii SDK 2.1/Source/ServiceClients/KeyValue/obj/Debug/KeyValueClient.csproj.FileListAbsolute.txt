@@ -1,0 +1,8 @@
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\KeyValue\Bin\Debug\Microsoft.Hawaii.KeyValue.Client.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\KeyValue\Bin\Debug\Microsoft.Hawaii.KeyValue.Client.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\KeyValue\Bin\Debug\Microsoft.Hawaii.ClientBase.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\KeyValue\Bin\Debug\Microsoft.Hawaii.ClientBase.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\KeyValue\Bin\Debug\Microsoft.Hawaii.ClientBase.xml
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\KeyValue\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\KeyValue\obj\Debug\Microsoft.Hawaii.KeyValue.Client.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\KeyValue\obj\Debug\Microsoft.Hawaii.KeyValue.Client.pdb

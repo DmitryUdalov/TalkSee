@@ -1,0 +1,9 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="KeyValueSampleApp" EntryPointType="KeyValueSampleApp.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="KeyValueSampleApp" Source="KeyValueSampleApp.dll" />
+    <AssemblyPart x:Name="Microsoft.Hawaii.ClientBase" Source="Microsoft.Hawaii.ClientBase.dll" />
+    <AssemblyPart x:Name="Microsoft.Hawaii.KeyValue.Client" Source="Microsoft.Hawaii.KeyValue.Client.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+  </Deployment.Parts>
+</Deployment>

@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Hawaii.Rendezvous.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.RendezvousStorage">
+            <summary>
+            Helper class to store names and its secret key pair into the mobile's 
+            isolated storage.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Rendezvous.Client.RendezvousStorage.ContainerName">
+            <summary>Container name for App Relay Endpoint ids</summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousStorage.GetSecretKey(System.String)">
+            <summary>
+            Helper method to retrieve the secret key.
+            </summary>
+            <param name="registrationId">Specifies a registration id.</param>
+            <returns>String value for specified key.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousStorage.SetSecretKey(System.String,System.String)">
+            <summary>
+            Helper method to store the secret key.
+            </summary>
+            <param name="registrationId">Registration key.</param>
+            <param name="secretKey">Secret key.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousStorage.GetValue(System.String)">
+            <summary>
+            Gets a value for specified key from isolated storage.
+            </summary>
+            <returns>An endpoint object.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousStorage.SetValue(System.String,System.String)">
+            <summary>
+            Stores a value into Isolated storage.
+            </summary>
+            <param name="key">Specifies a key.</param>
+            <param name="value">Specifies a value.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousStorage.RemoveKey(System.String)">
+            <summary>
+            Helper method removes the key.
+            </summary>
+            <param name="key">Specifies a key.</param>
+        </member>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult">
+            <summary>
+            Class to carry the results of Rendezvous service invocation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult.NameRegistration">
+            <summary>
+            Gets or sets registration id.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.NamespaceDoc">
+            <summary>
+            The Microsoft.Hawaii.Rendezvous.Client namespace contains classes for utilizing
+            the Hawaii Rendezvous Service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.NameRegistration">
+            <summary>
+            Represents a multicast group of communications endpoints.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Rendezvous.Client.NameRegistration.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Rendezvous.Client.NameRegistration.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Rendezvous.Client.NameRegistration.SecretKey">
+            <summary>
+            Gets or sets the secret key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.UnregisterNameAgent">
+            <summary>
+            Class to unregister (delete) a Name with the service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.UnregisterNameAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Rendezvous.Client.NameRegistration)">
+            <summary>
+            Initializes a new instance of the UnregisterNameAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the rendezvous service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="registration">Specifies a name registration object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.UnregisterNameAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,System.Object)">
+            <summary>
+            Initializes a new instance of the UnregisterNameAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the rendezvous service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.UnregisterNameAgent.CreateServiceUri(System.String,Microsoft.Hawaii.Rendezvous.Client.NameRegistration)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <returns>A valid uri service object.</returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.AssociateIdAgent">
+            <summary>
+            Class to asociate a registeration id to a name with the service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.AssociateIdAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Rendezvous.Client.NameRegistration)">
+            <summary>
+            Initializes a new instance of the AssociateIdAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the rendezvous service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="registration">Specifies a name registration object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.AssociateIdAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,System.Object)">
+            <summary>
+            Initializes a new instance of the AssociateIdAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the rendezvous service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.AssociateIdAgent.CreateServiceUri(System.String,Microsoft.Hawaii.Rendezvous.Client.NameRegistration)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <returns>A valid uri service object.</returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.DisassociateIdAgent">
+            <summary>
+            Class to disasociate a registeration id to a name with the service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.DisassociateIdAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Rendezvous.Client.NameRegistration)">
+            <summary>
+            Initializes a new instance of the DisassociateIdAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the rendezvous service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="registration">Specifies a name registration object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.DisassociateIdAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,System.Object)">
+            <summary>
+            Initializes a new instance of the DisassociateIdAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the rendezvous service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.DisassociateIdAgent.CreateServiceUri(System.String,Microsoft.Hawaii.Rendezvous.Client.NameRegistration)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <returns>A valid uri service object.</returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.LookupNameAgent">
+            <summary>
+            Class to register a Name with the service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.LookupNameAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String)">
+            <summary>
+            Initializes a new instance of the LookupNameAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the speech service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="name">Specifies a name.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.LookupNameAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the LookupNameAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the speech service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="name">Specifies a name of endpoint or group.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.LookupNameAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.LookupNameAgent.CreateServiceUri(System.String,System.String,System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="name">Specifies a group name.</param>
+            <returns>A valid uri service object.</returns>
+        </member>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.RendezvousService">
+            <summary>
+            Helper class that provides access to the Rendezvous service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.DefaultHostName">
+            <summary>
+            Specifies the default service host name. This will be used to create the service url.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.NameSignature">
+            <summary>
+            Specifies a signature for the REST methods.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.stagingConfigFileName">
+            <summary>
+            The name of the config file that indicates where the Rendezvous staging service is located.  Used only as a test hook.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.hostName">
+            <summary>
+            The service host name.  This is the private variable that is initialized on first
+            access via the ServiceScope get accessor.  If a config file is present to point to a
+            staging server, that host will be stored.  Otherwise, the default is used.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.serviceScope">
+            <summary>
+            The service scope.  This is the private variable that is initialized on first
+            access via the GetServiceScope() method.  If a config file is present to point to a
+            staging server, that host will be stored.  Otherwise, the default is used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.LookupNameAsync(System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to find a registration id for a name.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="name">Specifies a group name.</param>
+            <param name="onComplete">Specifiesa an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object which will be provided in the call to the "on complete" calback.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.RegisterNameAsync(System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to register a Name with the service.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="name">Specifies a name to register.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.UnregisterNameAsync(System.String,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to unregister (delete) a Name with the service.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.AssociateIdAsync(System.String,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to asociate a registeration id to a name with the service.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.DisassociateIdAsync(System.String,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to disasociate a registeration id to a name with the service.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.LookupNameAsync(System.String,System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to find a registration id for a name.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="name">Specifies a group name.</param>
+            <param name="onComplete">Specifiesa an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object which will be provided in the call to the "on complete" calback.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.RegisterNameAsync(System.String,System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to register a Name with the service.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="name">Specifies a name to register.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.UnregisterNameAsync(System.String,System.String,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to unregister (delete) a Name with the service.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.AssociateIdAsync(System.String,System.String,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to asociate a registeration id to a name with the service.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.DisassociateIdAsync(System.String,System.String,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to disasociate a registeration id to a name with the service.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.LookupNameAsync(Microsoft.Hawaii.ClientIdentity,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to find a registration id for a name.
+            </summary>
+            <param name="identity">The hawaii client identity.</param>
+            <param name="name">Specifies a group name.</param>
+            <param name="onComplete">Specifiesa an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object which will be provided in the call to the "on complete" calback.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.RegisterNameAsync(Microsoft.Hawaii.ClientIdentity,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to register a Name with the service.
+            </summary>
+            <param name="identity">The hawaii client identity.</param>
+            <param name="name">Specifies a name to register.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.UnregisterNameAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to unregister (delete) a Name with the service.
+            </summary>
+            <param name="identity">The hawaii client identity.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.AssociateIdAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to asociate a registeration id to a name with the service.
+            </summary>
+            <param name="identity">The hawaii client identity.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.DisassociateIdAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.Rendezvous.Client.NameRegistration,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Rendezvous.Client.NameRegistrationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Helper method to disasociate a registeration id to a name with the service.
+            </summary>
+            <param name="identity">The hawaii client identity.</param>
+            <param name="registration">Specifies a name registration object.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.GetHostName">
+            <summary>
+            Returns the Host Name to be used when accessing the service.  This will generally
+            be the value specified in the DefaultHostName, but it can conditionally be set with
+            the presence of a config file on first access.
+            </summary>
+            <returns>A string containing the host name of the service</returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.HostName">
+            <summary>
+            Gets the Host Name to be used when accessing the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Rendezvous.Client.RendezvousService.ServiceScope">
+            <summary>
+            Gets the service scope to be used when accessing the adm OAuth service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Rendezvous.Client.RegisterNameAgent">
+            <summary>
+            Class to register a Name with the service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RegisterNameAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String)">
+            <summary>
+            Initializes a new instance of the RegisterNameAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the rendezvous service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="name">Specifies a name to register.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RegisterNameAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the RegisterNameAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the rendezvous service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>
+            <param name="name">Specifies a name to register.</param>
+            <param name="stateObject">Specifies a user defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RegisterNameAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Rendezvous.Client.RegisterNameAgent.CreateServiceUri(System.String,System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="name">Specifies a name to register.</param>
+            <returns>A valid uri service object.</returns>
+        </member>
+    </members>
+</doc>

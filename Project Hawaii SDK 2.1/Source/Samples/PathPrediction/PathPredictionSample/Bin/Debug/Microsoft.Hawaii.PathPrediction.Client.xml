@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Hawaii.PathPrediction.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService">
+            <summary>
+            Mobile client to the Path Prediction Web Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService.DefaultServicePath">
+            <summary>
+            Path to the service access point
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService.stagingConfigFileName">
+            <summary>
+            The name of the config file that indicates where the Relay staging service is located.  Used only for testing
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService.servicePath">
+            <summary>
+            path of the service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService.serviceScope">
+            <summary>
+            The service scope.  This is the private variable that is initialized on first
+            access via the ServiceScope get accessor.  If a config file is present to point to a
+            staging server, that host will be stored.  Otherwise, the default is used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService.PredictLocationAsync(System.String,Microsoft.Hawaii.PathPrediction.Client.PredictLocationRequest,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.PathPrediction.Client.PredictLocationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Calls the PredictLocation service method
+            </summary>
+            <param name="hawaiiAppId">login to use</param>
+            <param name="request">request parameter to the method</param>
+            <param name="onComplete">on complete callback</param>
+            <param name="stateObject">Optional correlation user state object</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService.PredictLocationAsync(System.String,System.String,Microsoft.Hawaii.PathPrediction.Client.PredictLocationRequest,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.PathPrediction.Client.PredictLocationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Calls the PredictLocation service method
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="request">request parameter to the method</param>
+            <param name="onComplete">on complete callback</param>
+            <param name="stateObject">Optional correlation user state object</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService.PredictLocationAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.PathPrediction.Client.PredictLocationRequest,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.PathPrediction.Client.PredictLocationResult}.OnCompleteDelegate,System.Object)">
+            <summary>
+            Calls the PredictLocation service method
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="request">request parameter to the method</param>
+            <param name="onComplete">on complete callback</param>
+            <param name="stateObject">Optional correlation user state object</param>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService.ServicePath">
+            <summary>
+            Gets the service path
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.PathPredictionService.ServiceScope">
+            <summary>
+            Gets the service scope to be used when accessing the adm OAuth service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.PathPrediction.Client.PredictLocationAgent">
+            <summary>
+            Class agent to create call PredictLocation from Path PredictionService
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.PredictLocationAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.PathPrediction.Client.PredictLocationRequest,System.Object)">
+            <summary>
+            Initializes a new instance of the PredictLocationAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="clientIdentity">Specifies the client identity.</param>        
+            <param name="request">Request to the Path Prediction Service.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.PredictLocationAgent.GetPostData">
+            <summary>
+            Converts the request into bytes to be posted
+            </summary>
+            <returns>
+            The POST data as an array of bytes.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.PredictLocationAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.PredictLocationAgent.Request">
+            <summary>
+            Gets location prediction request
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.PredictLocationAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.PathPrediction.Client.LatLong">
+            <summary>
+            Represents a latitude and longitude
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.PathPrediction.Client.LatLong.EarthRadiusMeters">
+            <summary>
+            The average radius of the earth in meters
+            value taken from http://en.wikipedia.org/wiki/Earth_radius#Mean_radius
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.LatLong.#ctor(System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the LatLong struct
+            </summary>
+            <param name="latitudeDegrees">The latitude in degrees of the location</param>
+            <param name="longitudeDegrees">The longitude in degrees of the location</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.LatLong.op_Equality(Microsoft.Hawaii.PathPrediction.Client.LatLong,Microsoft.Hawaii.PathPrediction.Client.LatLong)">
+            <summary>
+            Determines if two latlongs refer to the same location
+            </summary>
+            <param name="llA">the first location</param>
+            <param name="llB">the second location</param>
+            <returns>true if the two latlongs are the same, false otherwise</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.LatLong.op_Inequality(Microsoft.Hawaii.PathPrediction.Client.LatLong,Microsoft.Hawaii.PathPrediction.Client.LatLong)">
+            <summary>
+            Determines if two latlongs are NOT the same location
+            </summary>
+            <param name="llA">the first location</param>
+            <param name="llB">the second location</param>
+            <returns>true if the two latlongs differ, false otherwise</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.LatLong.DistanceMeters(Microsoft.Hawaii.PathPrediction.Client.LatLong)">
+            <summary>
+            Calculates the distance between the current latlong and the supplied latlong.
+            Uses Haversine formula from http://mathforum.org/library/drmath/view/51879.html 
+            </summary>
+            <param name="latLong">The remote location to calculate the distance to</param>
+            <returns>The distance in meters between the two locations</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.LatLong.Equals(System.Object)">
+            <summary>
+            determines if this instance is the same as the supplied instance
+            </summary>
+            <param name="obj">the object to compare ourselves with</param>
+            <returns>True if it is the same object, false otherwise</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.LatLong.GetHashCode">
+            <summary>
+            Gets a hash code for this object
+            </summary>
+            <returns>THe object's hashcode</returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.LatLong.Latitude">
+            <summary>
+            Gets or sets latitude of this location
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.LatLong.Longitude">
+            <summary>
+            Gets or sets the longitude of this location
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.PathPrediction.Client.NamespaceDoc">
+            <summary>
+            The Microsoft.Hawaii.PathPrediction.Client namespace contains classes for sending and
+            receiving messages through the Hawaii Path Prediction Service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.PathPrediction.Client.PredictLocationResult">
+            <summary>
+            Class to carry the results of PathPrediction.PredictLocation method invocation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.PredictLocationResult.PossibleDestinations">
+            <summary>
+            Gets the result of PredictLocation call 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.PathPrediction.Client.PossibleDestination">
+            <summary>
+            An object that represents a latlong and an associated probability of being a final destination
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.PossibleDestination.Location">
+            <summary>
+            Gets or sets the location of the potential destination
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.PossibleDestination.Probability">
+            <summary>
+            Gets or sets the probability that this location is a potential destination
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.PathPrediction.Client.PredictLocationRequest">
+            <summary>
+            Request for the Predict Location method
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.PredictLocationRequest.SerializeToJson">
+            <summary>
+            Converts this object to JSon string
+            </summary>
+            <returns>String containing the requiest serialized to JSON</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.PathPrediction.Client.PredictLocationRequest.SerializeToJsonBytes">
+            <summary>
+            Converts this object to JSon bytes
+            </summary>
+            <returns>Bytes containing the requiest serialized to JSON</returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.PredictLocationRequest.Path">
+            <summary>
+            Gets or sets the the latlong crumbs of the current trip whose destinations we are attempting to predict.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.PathPrediction.Client.PredictLocationRequest.MaxDestinations">
+            <summary>
+            Gets or sets the top N results to retrieve.  
+            </summary>
+            <example>Calling this function with the value 500 will return the top 500 most likely destinations</example>
+        </member>
+    </members>
+</doc>

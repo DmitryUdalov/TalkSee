@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PathPredictionSampleApp</name>
+    </assembly>
+    <members>
+        <member name="T:PathPredictionSample.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.App.phoneApplicationInitialized">
+            <summary>
+            Avoid double-initialization
+            </summary>
+        </member>
+        <member name="M:PathPredictionSample.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PathPredictionSample.App"/> class.
+            </summary>
+        </member>
+        <member name="M:PathPredictionSample.App.Application_Launching(System.Object,Microsoft.Phone.Shell.LaunchingEventArgs)">
+            <summary>
+            Handles the <see cref="E:Windows.Phone.Shell.PhoneApplicationService.Launching"/> event of the application control.
+            </summary>
+            <remarks>This code will not execute when the application is reactivated.</remarks>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Microsoft.Phone.Shell.LaunchingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PathPredictionSample.App.Application_Activated(System.Object,Microsoft.Phone.Shell.ActivatedEventArgs)">
+            <summary>
+            Handles the <see cref="E:Windows.Phone.Shell.PhoneApplicationService.Activated"/> event of the application control.
+            </summary>
+            <remarks>This code will not execute when the application is first launched.</remarks>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Microsoft.Phone.Shell.ActivatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PathPredictionSample.App.Application_Deactivated(System.Object,Microsoft.Phone.Shell.DeactivatedEventArgs)">
+            <summary>
+            Handles the <see cref="E:Windows.Phone.Shell.PhoneApplicationService.Deactivated"/> event of the application control.
+            </summary>
+            <remarks>This code will not execute when the application is closing.</remarks>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Microsoft.Phone.Shell.DeactivatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PathPredictionSample.App.Application_Closing(System.Object,Microsoft.Phone.Shell.ClosingEventArgs)">
+            <summary>
+            Handles the <see cref="E:Windows.Phone.Shell.PhoneApplicationService.Closing"/> event of the application control.
+            </summary>
+            <remarks>This code will not execute when the application is deactivated.</remarks>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Microsoft.Phone.Shell.ClosingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PathPredictionSample.App.RootFrame_NavigationFailed(System.Object,System.Windows.Navigation.NavigationFailedEventArgs)">
+            <summary>
+            Handles the <see cref="E:Microsoft.Phone.Controls.PhoneApplicationFrame.NavigationFailed"/> event of the root frame control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Navigation.NavigationFailedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PathPredictionSample.App.Application_UnhandledException(System.Object,System.Windows.ApplicationUnhandledExceptionEventArgs)">
+            <summary>
+            Handles the <see cref="E:System.Windows.Application.UnhandledException"/> event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.ApplicationUnhandledExceptionEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PathPredictionSample.App.InitializePhoneApplication">
+            <summary>
+            Initializes the phone application.
+            </summary>
+            <remarks>Do not add any additional code to this method.</remarks>
+        </member>
+        <member name="M:PathPredictionSample.App.CompleteInitializePhoneApplication(System.Object,System.Windows.Navigation.NavigationEventArgs)">
+            <summary>
+            Completes the initialize phone application.
+            </summary>
+            <remarks>Do not add any additional code to this method.</remarks>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.Navigation.NavigationEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PathPredictionSample.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.App.RootFrame">
+            <summary>
+            Gets the root <see cref="T:PhoneApplicationFrame"/> of the application.
+            </summary>
+            <returns>The root <see cref="T:PhoneApplicationFrame"/> of the application..</returns>
+        </member>
+        <member name="T:PathPredictionSample.MainPage">
+            <summary>
+            Interaction logic for MainPage.xaml
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.MainPage.MaxCrumbs">
+            <summary>
+            The maximum number of trip crumbs that we will maintain
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.MainPage.MaxDestinations">
+            <summary>
+            The maximum number of destinations to retrieve from the server
+            </summary>
+            <remarks>More results in a better prediction but also increases bandwidth used and slows down the prediction process</remarks>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.MainPage.currentLocation">
+            <summary>
+            The current location
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.MainPage.watcher">
+            <summary>
+            the location service watcher
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.MainPage.predictionRequestsInProgress">
+            <summary>
+            A counter to determine if a prediction request is in progress
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.MainPage.possibleDestinations">
+            <summary>
+            The list of current potential destinations
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.MainPage.predictionRequest">
+            <summary>
+            The prediction request object
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.MainPage.tripCrumbs">
+            <summary>
+            The queue that stores the GPS crumbs for the current trip
+            </summary>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PathPredictionSample.MainPage"/> class.
+            </summary>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.GetMapResolution(System.Double,System.Double)">
+            <summary>
+            Retrieves the distance per pixel of the map at it's current zoom level
+            </summary>
+            <param name="latitude">The latitude for the resolution request</param>
+            <param name="zoomLevel">The current zoom level of the map</param>
+            <returns>resulution of the map</returns>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.Watcher_StatusChanged(System.Object,System.Device.Location.GeoPositionStatusChangedEventArgs)">
+            <summary>
+            Event handler for the GPS device status change. Updates the UI with the latest GPS status
+            </summary>
+            <param name="sender">The invoking object</param>
+            <param name="e">The event parameters</param>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.Watcher_PositionChanged(System.Object,System.Device.Location.GeoPositionChangedEventArgs{System.Device.Location.GeoCoordinate})">
+            <summary>
+            Event handler for the GPS position changed
+            </summary>
+            <param name="sender">The invoking object</param>
+            <param name="e">The event parameters</param>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.ExecutePrediction(System.Object)">
+            <summary>
+            Executes a prediction with the supplied GPS points
+            </summary>
+            <param name="o">The trip crumbs to use for running the prediction</param>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.PredictionRequest_Completed(Microsoft.Hawaii.PathPrediction.Client.PredictLocationResult)">
+            <summary>
+            The event handler that handles the prediction request completion
+            </summary>
+            <param name="result">The results of the prediction request</param>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.CenterLocation(Microsoft.Hawaii.PathPrediction.Client.LatLong)">
+            <summary>
+            Centers the map control on the current location
+            </summary>
+            <param name="location">location to center the map</param>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.ApplicationBarMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles menu item clicks on the main menu
+            </summary>
+            <param name="sender">the invoking object</param>
+            <param name="e">the event arguments</param>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.MenuMe_Click(System.Object,System.EventArgs)">
+            <summary>
+            Centers the map on the current location
+            </summary>
+            <param name="sender">the invoking object</param>
+            <param name="e">the event parameters</param>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.MenuTarget_Click(System.Object,System.EventArgs)">
+            <summary>
+            Centers the map at the target location
+            </summary>
+            <param name="sender">the invoking object</param>
+            <param name="e">the event parameters</param>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.MenuDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+            Clears the trip history
+            </summary>
+            <param name="sender">the invoking object</param>
+            <param name="e">the event parameters</param>
+        </member>
+        <member name="M:PathPredictionSample.MainPage.VerifyHawaiiIdentity">
+            <summary>
+            Verify that the Hawaii identity is set correctly.
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.MainPage.CurrentLocationPulsar">
+            <summary>
+            Gets or sets the pulsar for the current location
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.MainPage.TargetLocationPulsar">
+            <summary>
+            Gets or sets the pulsar for the target location
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.MainPage.TargetLocationPulsarRadiusInMeters">
+            <summary>
+            Gets or sets the radius that the pulsar should be in meters
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.MainPage.TargetLocation">
+            <summary>
+            Gets or sets the predicted location
+            </summary>
+        </member>
+        <member name="T:PathPredictionSample.Pulsar">
+            <summary>
+            Represents the position of prediction of user's current location
+            </summary>
+        </member>
+        <member name="M:PathPredictionSample.Pulsar.#ctor">
+            <summary>
+            Initializes a new instance of the Pulsar class
+            </summary>
+        </member>
+        <member name="M:PathPredictionSample.Pulsar.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.Pulsar.OuterEllipse">
+            <summary>
+            Gets the outer ellipse
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.Pulsar.InnerEllipse">
+            <summary>
+            Gets the inner ellipse
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.Pulsar.Radius">
+            <summary>
+            Gets or sets the redius of the pulsar
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.Pulsar.DarkColor">
+            <summary>
+            Gets or sets the dark color of the pulsar 
+            </summary>
+        </member>
+        <member name="P:PathPredictionSample.Pulsar.LightColor">
+            <summary>
+            Gets or sets the dark color of the pulsar 
+            </summary>
+        </member>
+        <member name="T:PathPredictionSample.HawaiiClient">
+            <summary>
+            HawaiiClient stores the Hawaii client identity.
+            </summary>
+            <remarks>
+            Please consult the "Hawaii Installation Guide.docx" on how to obtain credentials
+            </remarks>
+        </member>
+        <member name="F:PathPredictionSample.HawaiiClient.AdmClientId">
+            <summary>
+            The Azure data market client Id.
+            </summary>
+        </member>
+        <member name="F:PathPredictionSample.HawaiiClient.AdmClientSecret">
+            <summary>
+            The Azure data market client secret.
+            </summary>
+        </member>
+        <member name="T:PathPredictionSample.MapLegendPage">
+            <summary>
+            Legend Page
+            </summary>
+        </member>
+        <member name="M:PathPredictionSample.MapLegendPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:PathPredictionSample.MapLegendPage.#ctor">
+            <summary>
+            Initializes a new instance of the MapLegendPage class
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Hawaii.Translator.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Hawaii.Translator.Client.TranslatorService">
+            <summary>
+            Helper class that provides access to the Translator service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.DefaultHostName">
+            <summary>
+            Specifies the default service host name. This will be used to create the service url.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.TranslatorSignature">
+            <summary>
+            Specifies a signature for the REST methods of translator service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.GetLanguagesForTranslateKey">
+            <summary>
+            Specifies a query string key of GetLanguagesForTranslate.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.GetLanguagesForSpeakKey">
+            <summary>
+            Specifies a query string key of GetLanguagesForSpeak.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.TranslateKey">
+            <summary>
+            Specifies a query string key of Translate.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.TextKey">
+            <summary>
+            Specifies a query string key of text.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.FromKey">
+            <summary>
+            Specifies a query string key of the language to translate from.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.ToKey">
+            <summary>
+            Specifies a query string key of the language to translate to.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.SpeakKey">
+            <summary>
+            Specifies a query string key of Speak.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.SpeakLanguageKey">
+            <summary>
+            Specifies a query string key of speak language.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.SpeakFormatKey">
+            <summary>
+            Specifies a query string key of speak format.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.SpeakOptionsKey">
+            <summary>
+            Specifies a query string key of speak options.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.LocaleKey">
+            <summary>
+            Specifies a query string key of locale.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.StagingConfigFileName">
+            <summary>
+            The name of the config file that indicates where the translater staging service is located.  Used only as a test hook.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.hostName">
+            <summary>
+            The service host name.  This is the private variable that is initialized on first
+            access via the ServiceScope get accessor.  If a config file is present to point to a
+            staging server, that host will be stored.  Otherwise, the default is used.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslatorService.serviceScope">
+            <summary>
+            The service scope.  This is the private variable that is initialized on first
+            access via the GetServiceScope() method.  If a config file is present to point to a
+            staging server, that host will be stored.  Otherwise, the default is used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.GetLanguagesForTranslateAsync(System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateResult}.OnCompleteDelegate,System.Object,System.String)">
+            <summary>
+            Helper method to initiate the call that gets the supported languages for translate method.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="locale">The system locale</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.GetLanguagesForTranslateAsync(System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateResult}.OnCompleteDelegate,System.Object,System.String)">
+            <summary>
+            Helper method to initiate the call that gets the supported languages for translate method.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="locale">The system locale</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.GetLanguagesForSpeakAsync(System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakResult}.OnCompleteDelegate,System.Object,System.String)">
+            <summary>
+            Helper method to initiate the call that gets the supported languages for speak method.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="locale">The system locale</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.GetLanguagesForSpeakAsync(System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakResult}.OnCompleteDelegate,System.Object,System.String)">
+            <summary>
+            Helper method to initiate the call that gets the supported languages for speak method.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="locale">The system locale</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.TranslateAsync(System.String,System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.TranslateResult}.OnCompleteDelegate,System.Object,System.String)">
+            <summary>
+            Helper method to initiate the call that translate method.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="text">The text to be translated.</param>
+            <param name="to">The language translate to.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="from">The language translate from.</param>        
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.TranslateAsync(System.String,System.String,System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.TranslateResult}.OnCompleteDelegate,System.Object,System.String)">
+            <summary>
+            Helper method to initiate the call that translate method.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="text">The text to be translated.</param>
+            <param name="to">The language translate to.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="from">The language translate from.</param>        
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.SpeakAsync(System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.SpeakResult}.OnCompleteDelegate,System.Object,System.String,System.String,System.String)">
+            <summary>
+            Helper method to initiate the call that speak method.
+            </summary>
+            <param name="hawaiiAppId">Specifies the Hawaii Application Id.</param>
+            <param name="text">The text to be converted to speech.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="language">The language of the speech.</param>        
+            <param name="format">The stream format of the content type. Currently "audio/wav" and "audio/mp3" are available. The default value is "audio/wav".</param>
+            <param name="options">Specifies the quality of the audio signals. Currently "MaxQuality" and "MinSize" are available. The default value is "MinSize".</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.SpeakAsync(System.String,System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.SpeakResult}.OnCompleteDelegate,System.Object,System.String,System.String,System.String)">
+            <summary>
+            Helper method to initiate the call that speak method.
+            </summary>
+            <param name="clientId">The adm client Id.</param>
+            <param name="clientSecret">The adm client secret.</param>
+            <param name="text">The text to be converted to speech.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="language">The language of the speech.</param>        
+            <param name="format">The stream format of the content type. Currently "audio/wav" and "audio/mp3" are available. The default value is "audio/wav".</param>
+            <param name="options">Specifies the quality of the audio signals. Currently "MaxQuality" and "MinSize" are available. The default value is "MinSize".</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.GetLanguagesForTranslateAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateResult}.OnCompleteDelegate,System.Object,System.String)">
+            <summary>
+            Helper method to initiate the call that gets the supported languages for translate method.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="locale">The system locale</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.GetLanguagesForSpeakAsync(Microsoft.Hawaii.ClientIdentity,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakResult}.OnCompleteDelegate,System.Object,System.String)">
+            <summary>
+            Helper method to initiate the call that gets the supported languages for speak method.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="locale">The system locale</param>       
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.TranslateAsync(Microsoft.Hawaii.ClientIdentity,System.String,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.TranslateResult}.OnCompleteDelegate,System.Object,System.String)">
+            <summary>
+            Helper method to initiate the call that translate method.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="text">The text to be translated.</param>
+            <param name="to">The language translate to.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="from">The language translate from.</param>        
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.SpeakAsync(Microsoft.Hawaii.ClientIdentity,System.String,Microsoft.Hawaii.ServiceAgent{Microsoft.Hawaii.Translator.Client.SpeakResult}.OnCompleteDelegate,System.Object,System.String,System.String,System.String)">
+            <summary>
+            Helper method to initiate the call that speak method.
+            </summary>
+            <param name="clientIdentity">The hawaii client identity.</param>
+            <param name="text">The text to be converted to speech.</param>
+            <param name="onComplete">Specifies an "on complete" delegate callback.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="language">The language of the speech.</param>        
+            <param name="format">The stream format of the content type. Currently "audio/wav" and "audio/mp3" are available. The default value is "audio/wav".</param>
+            <param name="options">Specifies the quality of the audio signals. Currently "MaxQuality" and "MinSize" are available. The default value is "MinSize".</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslatorService.GetHostName">
+            <summary>
+            Returns the Host Name to be used when accessing the service. This will generally
+            be the value specified in the DefaultHostName, but it can conditionally be set with
+            the presence of a config file on first access.
+            </summary>
+            <returns>A string containing the host name of the service</returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.TranslatorService.HostName">
+            <summary>
+            Gets the Host Name to be used when accessing the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.TranslatorService.ServiceScope">
+            <summary>
+            Gets the service scope to be used when accessing the adm OAuth service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.TranslateResult">
+            <summary>
+            Response for the Translate method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.TranslateResult.TextTranslated">
+            <summary>
+            Gets or sets the text be translated to the target language.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.SpeakAgent">
+            <summary>
+            Class agent to convert text to speech.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.SpeakAgent.text">
+            <summary>
+            The text to be translated.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.SpeakAgent.language">
+            <summary>
+            The language of the speech.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.SpeakAgent.format">
+            <summary>
+            The stream format of the content type. Currently "audio/wav" and "audio/mp3" are available. The default value is "audio/wav".
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.SpeakAgent.options">
+            <summary>
+            Specifies the quality of the audio signals. Currently "MaxQuality" and "MinSize" are available. The default value is "MinSize".
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.SpeakAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the SpeakAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="identity">Specifies client identity.</param>
+            <param name="text">The text to be converted to speech.</param>
+            <param name="language">The language of the speech.</param>
+            <param name="format">The stream format of the content type. Currently "audio/wav" and "audio/mp3" are available. The default value is "audio/wav".</param>
+            <param name="options">Specifies the quality of the audio signals. Currently "MaxQuality" and "MinSize" are available. The default value is "MinSize".</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.SpeakAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String,System.Object,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the SpeakAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="identity">Specifies client identity.</param>
+            <param name="text">The text to be converted to speech.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="language">The language of the speech.</param>
+            <param name="format">The stream format of the content type. Currently "audio/wav" and "audio/mp3" are available. The default value is "audio/wav".</param>
+            <param name="options">Specifies the quality of the audio signals. Currently "MaxQuality" and "MinSize" are available. The default value is "MinSize".</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.SpeakAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.SpeakAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.SpeakAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.SpeakAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.TranslateResponse">
+            <summary>
+            Response for the Translate method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.TranslateResponse.TextTranslated">
+            <summary>
+            Gets or sets the text be translated to the target language.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateResponse">
+            <summary>
+            Response for the GetLanguagesForTranslate method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateResponse.SupportedLanguages">
+            <summary>
+            Gets or sets the supported languages for translate.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.SpeakResponse">
+            <summary>
+            Response for the Speak method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.SpeakResponse.Audio">
+            <summary>
+            Gets or sets the byte array of the audio signals for speech. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakResponse">
+            <summary>
+            Response for the GetLanguagesForSpeak method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakResponse.SupportedLanguages">
+            <summary>
+            Gets or sets the supported languages for speak.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateAgent">
+            <summary>
+            Class agent to get supported languages for Translate method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String)">
+            <summary>
+            Initializes a new instance of the GetLanguagesForTranslateAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="identity">Specifies client identity.</param>
+            <param name="locale">The local system locale</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Object,System.String)">
+            <summary>
+            Initializes a new instance of the GetLanguagesForTranslateAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="identity">Specifies client identity.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="locale">The local system locale</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateAgent.CreateServiceUri(System.String,System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="locale">The system locale.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.NamespaceDoc">
+            <summary>
+            Microsoft.Hawaii.Translator.Client namespace contains classes for sending and
+            receiving messages through the Hawaii Translator Service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.Language">
+            <summary>
+            A class to represent the language.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.Language.Code">
+            <summary>
+            Gets or sets the code of the language.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.Language.Name">
+            <summary>
+            Gets or sets the name of the language.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.TranslateAgent">
+            <summary>
+            Class agent to translate the text.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslateAgent.text">
+            <summary>
+            The text to be translated.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslateAgent.from">
+            <summary>
+            The language translate from.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Hawaii.Translator.Client.TranslateAgent.to">
+            <summary>
+            The language translate to.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslateAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the TranslateAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="identity">Specifies client identity.</param>
+            <param name="text">The text to be translated.</param>
+            <param name="to">The language translate to.</param>
+            <param name="from">The language translate from.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslateAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String,System.String,System.Object,System.String)">
+            <summary>
+            Initializes a new instance of the TranslateAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="identity">Specifies client identity.</param>
+            <param name="text">The text to be translated.</param>
+            <param name="to">The language translate to.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="from">The language translate from.</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslateAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslateAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.TranslateAgent.CreateServiceUri(System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.TranslateAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.SpeakResult">
+            <summary>
+            Response for the Speak method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.SpeakResult.Audio">
+            <summary>
+            Gets or sets the byte array of the audio signals for speech. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakAgent">
+            <summary>
+            Class agent to get supported languages for Speak method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.String)">
+            <summary>
+            Initializes a new instance of the GetLanguagesForSpeakAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="identity">Specifies client identity.</param>
+            <param name="locale">The local system locale</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakAgent.#ctor(System.String,Microsoft.Hawaii.ClientIdentity,System.Object,System.String)">
+            <summary>
+            Initializes a new instance of the GetLanguagesForSpeakAgent class.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="identity">Specifies client identity.</param>
+            <param name="stateObject">Specifies a user-defined object.</param>
+            <param name="locale">The local system locale</param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakAgent.ParseOutput(System.IO.Stream)">
+            <summary>
+            An overriden method to parse the result from the service.
+            </summary>
+            <param name="responseStream">
+            A valid response stream.
+            </param>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakAgent.GetPostData">
+            <summary>
+            An overriden method to get the data for POST service call.
+            </summary>
+            <returns>Return the byte array of the Post data.</returns>
+        </member>
+        <member name="M:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakAgent.CreateServiceUri(System.String,System.String)">
+            <summary>
+            Method creates the service uri.
+            </summary>
+            <param name="hostName">Specifies a host name of the service.</param>
+            <param name="locale">The system locale.</param>
+            <returns>
+            A valid service uri object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakAgent.RequestContentType">
+            <summary>
+            An overriden property to set the request content type to be Json.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakResult">
+            <summary>
+            Result for the GetLanguagesForSpeak method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.GetLanguagesForSpeakResult.SupportedLanguages">
+            <summary>
+            Gets or sets the supported languages for speak.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateResult">
+            <summary>
+            Result for the GetLanguagesForTranslate method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Hawaii.Translator.Client.GetLanguagesForTranslateResult.SupportedLanguages">
+            <summary>
+            Gets or sets the supported languages for translate.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,33 @@
+﻿<Application 
+    x:Class="OcrSampleApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:localConverters="clr-namespace:OcrSampleApp.Converters" 
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+
+    <!--Application Resources-->
+    <Application.Resources>
+
+        <localConverters:StringMatchToVisibleConverter x:Key="StringMatchToVisibleConverter" />
+        <localConverters:AngleToRenderTransform x:Key="AngleToRenderTransform" />
+        <localConverters:BytesToKBytesConverter x:Key="BytesToKBytesConverter" />
+
+        <sys:Double x:Key="FunctionTileSize">200</sys:Double>
+
+        <Style x:Key="FunctionTileStyle" TargetType="Button">
+            <Setter Property="Width" Value="{StaticResource FunctionTileSize}" />
+            <Setter Property="Height" Value="{StaticResource FunctionTileSize}" />
+        </Style>
+
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

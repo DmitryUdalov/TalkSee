@@ -1,0 +1,622 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OcrSampleApp</name>
+    </assembly>
+    <members>
+        <member name="T:OcrSampleApp.ViewModels.PhotoAreaViewModel">
+            <summary>
+            View Model that is used by the PhotoArea user control.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.ViewModels.OcrViewModelBase">
+            <summary>
+            Base class for at least some of the view model classes used in the OcrTestClient project.
+            Since view models commonly need access to OcrData and OcrConversionStateManager instances
+            we collected that commonality here.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Utils.ModelBase">
+            <summary>
+            ModelBase is used as base class used where we need to implement INotifyPropertyChanged.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Utils.ModelBase.OnPropertyChanged(System.String)">
+            <summary>
+            Invokes the PropertyChanged event.
+            </summary>
+            <param name="propertyName">
+            The name of the property that was changed.
+            </param>
+        </member>
+        <member name="E:OcrSampleApp.Utils.ModelBase.PropertyChanged">
+            <summary>
+            Inherited from INotifyPropertyChanged. Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.ViewModels.OcrViewModelBase.#ctor(OcrSampleApp.Data.OcrData,OcrSampleApp.Data.OcrConversionStateManager)">
+            <summary>
+            Initializes a new instance of the OcrViewModelBase class.
+            </summary>
+            <param name="ocrData">
+            A reference to the OcrData instance that stores the 
+            photo stream and the text obtained after the OCR conversion.
+            </param>
+            <param name="ocrConversionStateManager">
+            A reference to the OcrConversionStateManager instance that stores the 
+            status of the last OCR conversion.
+            </param>
+        </member>
+        <member name="P:OcrSampleApp.ViewModels.OcrViewModelBase.OcrConversionStateManager">
+            <summary>
+            Gets the reference to the OcrData instance that stores the 
+            photo stream and the text obtained after the OCR conversion.
+            Note: the internal set will raise the PropertyChanged event.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.ViewModels.OcrViewModelBase.OcrData">
+            <summary>
+            Gets the reference to the OcrConversionStateManager instance that stores the 
+            status of the last OCR conversion.
+            Note: the internal set will raise the PropertyChanged event.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.ViewModels.PhotoAreaViewModel.#ctor(OcrSampleApp.Data.OcrData,OcrSampleApp.Data.OcrConversionStateManager)">
+            <summary>
+            Initializes a new instance of the PhotoAreaViewModel class.
+            </summary>
+            <param name="ocrData">
+            A reference to the OcrData instance that stores the 
+            photo stream and the text obtained after the OCR conversion.
+            </param>
+            <param name="ocrConversionStateManager">
+            A reference to the OcrConversionStateManager instance that stores the 
+            status of the last OCR conversion.
+            </param>
+        </member>
+        <member name="M:OcrSampleApp.ViewModels.PhotoAreaViewModel.OnPhotoStreamChanged">
+            <summary>
+            Must be called after the photo stream stored by this.OcrData changed. 
+            This will in turn update all properties that are related to the photo.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.ViewModels.PhotoAreaViewModel.SetPhotoSource(System.IO.Stream)">
+            <summary>
+            Sets the this.PhotoSource field based on photoStream.
+            </summary>
+            <param name="photoStream">
+            The photo stream as returned by CameraCaptureTask or PhotoChooserTask
+            in their Completed events in the ChosenPhoto field of the PhotoResult event arg.
+            </param>
+        </member>
+        <member name="M:OcrSampleApp.ViewModels.PhotoAreaViewModel.SetPhotoAngle(System.Int32)">
+            <summary>
+            Sets the this.PhotoAngle field based on the photo orientation.
+            </summary>
+            <param name="exifOrientationFlag">
+            The photo orientation. For comments on the photo orientation see ExifUtils.GetOrientationFlag.
+            </param>
+        </member>
+        <member name="P:OcrSampleApp.ViewModels.PhotoAreaViewModel.PhotoSource">
+            <summary>
+            Gets the stream that represents the photo as returned by CameraCaptureTask or PhotoChooserTask 
+            in their Completed events in the ChosenPhoto field of the PhotoResult event arg.
+            Note: the internal set will raise the PropertyChanged event.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.ViewModels.PhotoAreaViewModel.PhotoAngle">
+            <summary>
+            Gets the angle we need to rotate the photo with in order to show it correctly on the screen. 
+            This angle depends on the orientation that the camera had when the photo was taken.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Utils.OcrClientUtils">
+            <summary>
+            Utils is a general utility class that contains helper methods used throughout this application.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Utils.OcrClientUtils.GetPhotoBits(System.IO.Stream)">
+            <summary>
+            Returns a byte array with the content of the stream.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Utils.OcrClientUtils.LimitPhotoSize(System.IO.Stream,System.Double)">
+            <summary>
+            It will ensure that the photo does not exceed a maximum size. 
+            If needed the photo is scaled down by preserving its aspect ratio.
+            </summary>
+            <param name="photoStream">
+            The stream that represents the photo as returned by CameraCaptureTask or PhotoChooserTask.
+            </param>
+            <param name="photoMaxSizeDiagonal">
+            The diagonal of the scaled down photo.
+            </param>
+            <returns>
+            Returns a stream that has the scaled-down photo in JPEG format.
+            If the original stream represents a photo that is smaller or the same size as the scale-down size
+            then it returns the original stream.
+            </returns>
+        </member>
+        <member name="T:OcrSampleApp.MainPage">
+            <summary>
+            MainPage class contains the code behind for the MainPage user control.
+            The MainPage user control is the main user control used by this application.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.MainPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.MainPage.#ctor">
+            <summary>
+            Initializes a new instance of the MainPage class.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.MainPage.CopyDefaultImage">
+            <summary>
+            Copies default image for use in the Emulator.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.MainPage.OnBackKeyPress(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            This method is called when the hardware back key is pressed.
+            </summary>
+            <param name="e">
+            Allows us to cancel the request to indicate that it was handled by the application.
+            </param>
+        </member>
+        <member name="M:OcrSampleApp.MainPage.VerifyHawaiiIdentity">
+            <summary>
+            Verify that the Hawaii identity is set correctly.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Controls.PhotoArea">
+            <summary>
+            PhotoArea class contains the code behind for the PhotoArea user control.
+            The PhotoArea user control shows the photo that was taken with the camera 
+            or opened from the camera roll.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Controls.PhotoArea.#ctor">
+            <summary>
+            Initializes a new instance of the PhotoArea class.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Controls.PhotoArea.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Converters.AngleToRenderTransform">
+            <summary>
+            Converter that transforms an angle into a RotateTransform.
+            Note: One may be tempted to directly bind the Angle property of a RotateTransform. 
+                  That will only work in WPF and not in Silverlight for WPF7. In Silverlight/WPF7 binding 
+                  can be applied only to a FrameworkElement and RotateTransform is not a FrameworkElement.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Converters.AngleToRenderTransform.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the source data (value) that represents an angle measured in degrees to a RotateTransform 
+            before passing it to the target of a data binding for display in the UI.
+            </summary>
+            <param name="value">
+            The source data being passed to the target.
+            This represents an angle measured in degrees.
+            </param>
+            <param name="targetType">
+            The type of data expected by the target dependency property.
+            </param>
+            <param name="parameter">
+            It will be ignored by this converter.
+            </param>
+            <param name="culture">
+            The culture of the conversion. Ignored by this converter.
+            </param>
+            <returns>
+            Returns a RotateTransform with an angle corresponding to value.
+            </returns>
+        </member>
+        <member name="M:OcrSampleApp.Converters.AngleToRenderTransform.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            The ConvertBack is not implemented for this converter. 
+            ConvertBack will throw NotImplementedException if invoked.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:OcrSampleApp.Utils.ExifUtils">
+            <summary>
+            ExifUtils is a utility class that allow clients to get information 
+            like the "photo orientation" field from an image in Exif format.
+            Exif (Exchangeable image file format) is the image file format 
+            used by digital cameras including those on smartphones.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.Utils.ExifUtils.UnknownOrientation">
+            <summary>
+            Indicates an unknown orientation of the photo.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Utils.ExifUtils.#ctor(System.Byte[])">
+            <summary>
+            Initializes a new instance of the ExifUtils class.
+            </summary>
+            <param name="photoStreamBits">
+            The content in byte array form of the photo stream. This is the photo stream as returned 
+            by CameraCaptureTask or PhotoChooserTask in their Completed events in the 
+            ChosenPhoto field of the PhotoResult event arg.
+            </param>
+        </member>
+        <member name="M:OcrSampleApp.Utils.ExifUtils.GetOrientationFlag">
+            <summary>
+            Obtains the photo orientation field.
+            For the valid values see the comment marked with "Photo Orientation field".
+            If the photo orientation field cannot be obtained then it returns ExifUtils.UnknownOrientation.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Utils.ExifUtils.InternalGetOrientationFlag">
+            <summary>
+            Obtains the photo orientation field.
+            For the valid values see the comment marked with "Photo Orientation field".
+            If the photo orientation field cannot be obtained then it throws a FormatException.
+            </summary>
+            <exception cref="T:System.FormatException"></exception>
+        </member>
+        <member name="M:OcrSampleApp.Utils.ExifUtils.AdvanceToExifApplicationMarker(System.Int64@)">
+            <summary>
+            Advances the cursor to the Exif Application Marker immediately after the marker id.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Utils.ExifUtils.AdvanceToApplicationMarker(System.Int32,System.Int64@)">
+            <summary>
+            Advances the cursor to the given Application Marker immediately after the marker id.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Utils.ExifUtils.GetTagInfo(System.Int32,System.Int64)">
+            <summary>
+            Identifies and returns data about a given tag in the Image File Directory area.
+            The cursor must be at the start of the Image File Directory area.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Utils.ExifUtils.ExifTagInfo">
+            <summary>
+            ExifTagInfo contains information about a Exif Tag.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Utils.ExifUtils.ExifTagInfo.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the ExifTagInfo class.
+            </summary>
+            <param name="tagNumber">The tag number. This is a number that identifies the tag type.</param>
+            <param name="format">The format of the tag data.</param>
+            <param name="componentsNumber">
+            The number of components. 
+            Used when there is a maximum limit for the number of components.
+            </param>
+            <param name="valueOrOffset">
+            The value of the tag or the offset where the tag value can be find.
+            </param>
+        </member>
+        <member name="P:OcrSampleApp.Utils.ExifUtils.ExifTagInfo.TagNumber">
+            <summary>
+            Gets the tag number. This is a number that identifies the tag type.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.Utils.ExifUtils.ExifTagInfo.Format">
+            <summary>
+            Gets the format of the tag data.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.Utils.ExifUtils.ExifTagInfo.ComponentsNumber">
+            <summary>
+            Gets the number of components. 
+            This is used when there is a maximum limit for the number of components.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.Utils.ExifUtils.ExifTagInfo.ValueOrOffset">
+            <summary>
+            Gets the value of the tag or the offset where the tag value can be find.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.HawaiiClient">
+            <summary>
+            HawaiiClient stores the Hawaii client identity.
+            </summary>
+            <remarks>
+            Please consult the "Hawaii Installation Guide" on how to obtain credentials
+            </remarks>
+        </member>
+        <member name="F:OcrSampleApp.HawaiiClient.HawaiiApplicationId">
+            <summary>
+            The Hawaii Application Id.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Data.OcrConversionStateManager">
+            <summary>
+            OcrConversionStateManager implements a singleton that provides access 
+            to the state of the last OCR conversion. It inherits from ModelBase which means that 
+            interested parties can subscribe to its PropertyChanged. It also means that references to 
+            the singleton instance of type OcrConversionStateManager can be used in data binding 
+            syntax in XAML files.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.Data.OcrConversionStateManager.Instance">
+            <summary>
+            Gets the singleton instance of type OcrConversionStateManager.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.Data.OcrConversionStateManager.OcrConversionState">
+            <summary>
+            Gets or sets the state of the last OCR conversion.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.Data.OcrConversionStateManager.OcrConversionErrorMessage">
+            <summary>
+            Gets or sets the error message associated with the last OCR conversion.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.App">
+            <summary>
+            Application class.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.App.#ctor">
+            <summary>
+            Initializes a new instance of the App class.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.App.RootFrame">
+            <summary>
+            Gets root frame of the Phone Application.
+            </summary>
+            <returns>The root frame of the Phone Application.</returns>
+        </member>
+        <member name="T:OcrSampleApp.ViewModels.TextAreaViewModel">
+            <summary>
+            View Model that is used by the TextArea user control.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.ViewModels.TextAreaViewModel.#ctor(OcrSampleApp.Data.OcrData,OcrSampleApp.Data.OcrConversionStateManager)">
+            <summary>
+            Initializes a new instance of the TextAreaViewModel class.
+            </summary>
+            <param name="ocrData">
+            A reference to the OcrData instance that stores the 
+            photo stream and the text obtained after the OCR conversion.
+            </param>
+            <param name="ocrConversionStateManager">
+            A reference to the OcrConversionStateManager instance that stores the 
+            status of the last OCR conversion.
+            </param>
+        </member>
+        <member name="P:OcrSampleApp.ViewModels.TextAreaViewModel.TextViewMode">
+            <summary>
+            Gets or sets the flag that Specifies the view mode for 
+            the screen that shows the result of the OCR conversion.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Converters.StringMatchToVisibleConverter">
+            <summary>
+            Converter that transforms a string match to a Visibility.
+            This is particularly useful when we need to match the value of an enum in a converter.
+            Example:
+                Visibility="{Binding SomeEnumField, Converter={StaticResource StringMatchToVisibleConverter}, ConverterParameter=MatchingValueCorrespondingToVisible}">.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Converters.StringMatchToVisibleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the source data (value) to Visibility before passing it 
+            to the target of a data binding for display in the UI.
+            </summary>
+            <param name="value">
+            The source data being passed to the target.
+            </param>
+            <param name="targetType">
+            The type of data expected by the target dependency property.
+            </param>
+            <param name="parameter">
+            The string that is matched against value.ToString. 
+            This will be provided in the converter parameter in the data binding syntax.
+            </param>
+            <param name="culture">
+            The culture of the conversion. Ignored by this converter.
+            </param>
+            <returns>
+            Returns Visibility.Visible if value.ToString() and parameter.ToString() 
+            are equal. The comparison is case sensitive but using invariant culture.
+            </returns>
+        </member>
+        <member name="M:OcrSampleApp.Converters.StringMatchToVisibleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            The ConvertBack is not implemented for this converter. 
+            ConvertBack will throw NotImplementedException if invoked.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:OcrSampleApp.Controls.PhotoSelector">
+            <summary>
+            PhotoSelector class contains the code behind for the PhotoSelector user control.
+            The PhotoSelector user control allows the user to select the method of retriving 
+            a photo: capture from the camera or load from the camera roll.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.Controls.PhotoSelector.DoLimitPhotoSize">
+            <summary>
+            Indicates that the size of the photo has to be reduced (scaled-down)
+            to a certain limit before sending it over the wire.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.Controls.PhotoSelector.PhotoMaxSizeDiagonal">
+            <summary>
+            The diagonal of the scaled-down size.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Controls.PhotoSelector.#ctor">
+            <summary>
+            Initializes a new instance of the PhotoSelector class.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Controls.PhotoSelector.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Controls.TextArea">
+            <summary>
+            TextArea class contains the code behind for the TextArea user control.
+            The TextArea user control shows to the user the text resulted from the OCR conversion.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Controls.TextArea.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Controls.TextArea.#ctor">
+            <summary>
+            Initializes a new instance of the TextArea class.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Converters.BytesToKBytesConverter">
+            <summary>
+            Converter that transforms Bytes in Kilo Bytes.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Converters.BytesToKBytesConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the source data (value) that is a long representing some data length 
+            expressed in bytes before passing it to the target of a data binding for display in the UI.
+            </summary>
+            <param name="value">
+            The source data being passed to the target.
+            A long representing some data length expressed in bytes.
+            </param>
+            <param name="targetType">
+            The type of data expected by the target dependency property.
+            </param>
+            <param name="parameter">
+            It will be ignored by this converter.
+            </param>
+            <param name="culture">
+            The culture of the conversion. Ignored by this converter.
+            </param>
+            <returns>
+            Returns a RotateTransform a string that is the representation of the given length expressed in kilo bytes.
+            </returns>
+        </member>
+        <member name="M:OcrSampleApp.Converters.BytesToKBytesConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            The ConvertBack is not implemented for this converter. 
+            ConvertBack will throw NotImplementedException if invoked.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:OcrSampleApp.Data.OcrConversionState">
+            <summary>
+            Specifies the state of the OCR conversion.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.Data.OcrConversionState.ConversionNotStarted">
+            <summary>
+            Indicates that the conversion was not started.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.Data.OcrConversionState.Converting">
+            <summary>
+            Indicates that the conversion is in progress.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.Data.OcrConversionState.ConversionEmpty">
+            <summary>
+            Indicates that the conversion completed successfully but 
+            that the result returned from the OCR service was empty.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.Data.OcrConversionState.ConversionOK">
+            <summary>
+            Indicates that the conversion completed successfully.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.Data.OcrConversionState.ConversionError">
+            <summary>
+            Indicates that the conversion completed with an error.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.ViewModels.TextViewMode">
+            <summary>
+            Specifies the view mode for the screen that shows the result of the OCR conversion.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.ViewModels.TextViewMode.Simple">
+            <summary>
+            The text is displayed in a list where each item contains one text area.
+            </summary>
+        </member>
+        <member name="F:OcrSampleApp.ViewModels.TextViewMode.Detailed">
+            <summary>
+            The text is displayed in a list where each item 
+            contains one individual word showing some of its OCR parameters.
+            </summary>
+        </member>
+        <member name="T:OcrSampleApp.Data.OcrData">
+            <summary>
+            OcrData implements a singleton that provides access to the photo and 
+            corresponding text obtained from OCR conversion. It inherits from ModelBase which means that 
+            interested parties can subscribe to its PropertyChanged. It also means that references to 
+            the singleton instance of type OcrData can be used in data binding syntax in XAML files.
+            </summary>
+        </member>
+        <member name="M:OcrSampleApp.Data.OcrData.SetOcrResult(System.Collections.Generic.List{Microsoft.Hawaii.Ocr.Client.OcrText})">
+            <summary>
+            Sets the OCR conversion result.
+            </summary>
+            <param name="ocrResultList">
+            The OCR conversion result.
+            </param>
+        </member>
+        <member name="M:OcrSampleApp.Data.OcrData.GetWordCount">
+            <summary>
+            Determines the total word count from all text blocks stored in the OCR conversion result.
+            </summary>
+            <returns>
+            The total word count.
+            </returns>
+        </member>
+        <member name="P:OcrSampleApp.Data.OcrData.Instance">
+            <summary>
+            Gets the singleton instance of type OcrData.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.Data.OcrData.OcrResultList">
+            <summary>
+            Gets the OCR conversion result.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.Data.OcrData.PhotoStream">
+            <summary>
+            Gets or sets the stream that represents the photo as returned by CameraCaptureTask or PhotoChooserTask 
+            in their Completed events in the ChosenPhoto field of the PhotoResult event arg.
+            </summary>
+            <exception cref="T:System.ArgumentException">
+            Thrown when a 0 length stream is used as the value to set PhotoStream.
+            </exception>
+        </member>
+        <member name="P:OcrSampleApp.Data.OcrData.PhotoStreamSize">
+            <summary>
+            Gets the length of the photo stream in bytes.
+            </summary>
+        </member>
+        <member name="P:OcrSampleApp.Data.OcrData.ExifOrientationFlag">
+            <summary>
+            Gets or sets the photo orientation.
+            For comments on the photo orientation see ExifUtils.GetOrientationFlag.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,6 @@
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Smash\SmashClientDesktop\bin\Debug\Microsoft.Hawaii.Smash.ClientDesktop.dll.config
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Smash\SmashClientDesktop\bin\Debug\Microsoft.Hawaii.Smash.ClientDesktop.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Smash\SmashClientDesktop\bin\Debug\Microsoft.Hawaii.Smash.ClientDesktop.pdb
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Smash\SmashClientDesktop\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Smash\SmashClientDesktop\obj\Debug\Microsoft.Hawaii.Smash.ClientDesktop.dll
+C:\Users\mhiga\Desktop\TalkSee\Microsoft Research\Project Hawaii SDK 2.1\Source\ServiceClients\Smash\SmashClientDesktop\obj\Debug\Microsoft.Hawaii.Smash.ClientDesktop.pdb
