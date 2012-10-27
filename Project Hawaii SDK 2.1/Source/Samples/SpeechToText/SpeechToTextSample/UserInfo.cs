@@ -12,7 +12,7 @@ using System.Windows.Shapes;
 namespace SpeechToTextSampleApp
 {
     
-    public class User
+    public class UserInfo
     {
         private string _userName;
         private int _portNumber;
