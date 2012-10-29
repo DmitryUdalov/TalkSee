@@ -36,21 +36,9 @@
         <Grid.Resources>
         </Grid.Resources>
 
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Background="Black">
-            <TextBlock 
-                x:Name="ApplicationTitle" 
-                Text="Microsoft Research Project Hawaii SDK 2.0" 
-                Foreground="white" 
-                Margin="10,10,0,0"/>
-
-            <TextBlock 
-                x:Name="PageTitle"
-                Text="Speech to Text Sample App" 
-                FontSize="40" 
-                FontFamily="Calibri" 
-                FontWeight="Bold" 
-                Foreground="#FF0090E0" 
-                Margin="10,-5,0,0"/>
+        <StackPanel Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Name="ApplicationTitle" Text="TalkSee" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Name="PageTitle" Text="Test" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <Grid 
@@ -81,13 +69,13 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <TextBlock 
+           <!-- <TextBlock 
                 Grid.Row="0"
                 Foreground="White"
                 Text="Available speech grammars" 
-                Margin="12,10,12,0" />
+                Margin="12,10,12,0" />-->
 
-            <Border
+            <!--<Border
                 Grid.Row="1" 
                 Height="60"
                 Margin="12,5,12,0"
@@ -119,11 +107,11 @@
                         Visibility="Collapsed" />
 
                 </Grid>
-            </Border>
+            </Border>-->
 
             <TextBlock 
                 Grid.Row="2"
-                Text="Recognized texts" 
+                Text="Chat History" 
                 Foreground="White" 
                 HorizontalAlignment="Left"
                 Margin="12,10,12,0" />
@@ -163,7 +151,8 @@
             <shell:ApplicationBarIconButton x:Name="playButton"       Text="Play"    IconUri="/Images/play.png"       Click="PlayButton_Click"       IsEnabled="False"/>
             <shell:ApplicationBarIconButton x:Name="recognizeButton"  Text="Send"    IconUri="/Images/recognize.png"  Click="RecognizeButton_Click"  IsEnabled="False"/>
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem x:Name="ClearAllMenuItem"   Text="Clear all items"  Click="ClearAllMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem x:Name="SettingsMenuItem"   Text="Settings"  Click="SettingsMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem x:Name="HelpMenuItem"   Text="Help"  Click="HelpMenuItem_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

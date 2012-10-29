@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkSee", "TalkSee\TalkSee.csproj", "{23E229F8-9977-41E3-8BE4-F8B2E110EB49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkSee", "TalkSee\TalkSee.csproj", "{3927BCA2-FCF5-4C6C-B589-188A58355156}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{23E229F8-9977-41E3-8BE4-F8B2E110EB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23E229F8-9977-41E3-8BE4-F8B2E110EB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23E229F8-9977-41E3-8BE4-F8B2E110EB49}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{23E229F8-9977-41E3-8BE4-F8B2E110EB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23E229F8-9977-41E3-8BE4-F8B2E110EB49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23E229F8-9977-41E3-8BE4-F8B2E110EB49}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3927BCA2-FCF5-4C6C-B589-188A58355156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3927BCA2-FCF5-4C6C-B589-188A58355156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3927BCA2-FCF5-4C6C-B589-188A58355156}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3927BCA2-FCF5-4C6C-B589-188A58355156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3927BCA2-FCF5-4C6C-B589-188A58355156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3927BCA2-FCF5-4C6C-B589-188A58355156}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,6 +20,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
+using System.Windows.Data;
 
 namespace SpeechToTextSampleApp
 {
@@ -36,7 +37,7 @@ namespace SpeechToTextSampleApp
         public MainPage()
         {
             InitializeComponent();
-
+            Loaded += new RoutedEventHandler(MainPage_Loaded);
             this.VerifyHawaiiIdentity();
 
             this.AudioStream = new MemoryStream();
@@ -61,9 +62,30 @@ namespace SpeechToTextSampleApp
                     this.Dispatcher.BeginInvoke(() => this.OnSpeechGrammarsReceived(result));
                 });
 
-            this.RetrievingGrammarsLabel.Visibility = Visibility.Visible;
+            //this.RetrievingGrammarsLabel.Visibility = Visibility.Visible;
             this.RecognizingProgress.Visibility = Visibility.Visible;
 
+        }
+
+        void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            //List<UserInfo> directoryList = new List<UserInfo>();
+            //string name = "Test";
+            //int port = 3459;
+            //int id = 1109;
+            //string status = "Available";
+            //directoryList.Add(new UserInfo(name, port, id, status));
+            //Create the source string
+            //string s = "Test";
+
+            //Create the binding description
+            //Binding b = new Binding("");
+            //b.Mode = BindingMode.OneTime;
+            //b.Source = s;
+
+            //Attach the binding to the target  
+            //TitlePanel.SetBinding(TextBlock.TextProperty, b);
+            
         }
 
         /// <summary>
@@ -307,11 +329,11 @@ namespace SpeechToTextSampleApp
             Debug.Assert(result != null, "result is null");
 
             this.RecognizingProgress.Visibility = Visibility.Collapsed;
-            this.RetrievingGrammarsLabel.Visibility = Visibility.Collapsed;
+            //this.RetrievingGrammarsLabel.Visibility = Visibility.Collapsed;
             if (result.Status == Status.Success)
             {
                 this.SetButtonStates(true, false, false, false);
-                this.SpeechDomainsList.Visibility = Visibility.Visible;
+                //this.SpeechDomainsList.Visibility = Visibility.Visible;
 
                 this.availableGrammars = result.SpeechResult.Items;
                 if (this.availableGrammars == null)
@@ -319,12 +341,12 @@ namespace SpeechToTextSampleApp
                     return;
                 }
 
-                this.SpeechDomainsList.Items.Clear();
+                //this.SpeechDomainsList.Items.Clear();
 
-                if (this.availableGrammars != null)
-                {
-                    this.availableGrammars.ForEach((item) => this.SpeechDomainsList.Items.Add(item));
-                }
+                //if (this.availableGrammars != null)
+                //{
+                  //  this.availableGrammars.ForEach((item) => this.SpeechDomainsList.Items.Add(item));
+                //}
             }
             else
             {
@@ -341,7 +363,7 @@ namespace SpeechToTextSampleApp
 
 
                 MessageBox.Show(error, "Error", MessageBoxButton.OK);
-                this.NoGrammarsLabel.Visibility = Visibility.Visible;
+                //this.NoGrammarsLabel.Visibility = Visibility.Visible;
             }
         }
 
@@ -445,12 +467,12 @@ namespace SpeechToTextSampleApp
                 return;
             }
 
-            this.SpeechDomainsList.Items.Clear();
+            //this.SpeechDomainsList.Items.Clear();
 
-            if (this.availableGrammars != null)
-            {
-                this.availableGrammars.ForEach((item) => this.SpeechDomainsList.Items.Add(item));
-            }
+            //if (this.availableGrammars != null)
+            //{
+              //  this.availableGrammars.ForEach((item) => this.SpeechDomainsList.Items.Add(item));
+            //}
         }
 
         /// <summary>
@@ -496,6 +518,18 @@ namespace SpeechToTextSampleApp
         private void ClearAllMenuItem_Click(object sender, EventArgs e)
         {
             this.RecognizedStringListBox.Items.Clear();
+        }
+
+
+        private void SettingsMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
+        }
+
+
+        private void HelpMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Help.xaml", UriKind.Relative));
         }
     }
 }
