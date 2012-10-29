@@ -11,6 +11,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 
+using System.Diagnostics;
+
 namespace SpeechToTextSampleApp
 {
     public partial class Contacts : PhoneApplicationPage
@@ -19,6 +21,14 @@ namespace SpeechToTextSampleApp
         public Contacts()
         {
             InitializeComponent();
+            
+            SocketClient client = new SocketClient();
+            client.Connect("lore.cs.purdue.edu", 3459);
+            client.Send("ADD test\n");
+            string result = client.Receive();
+            Debug.WriteLine(result);
+            client.Close();
+
             Loaded += new RoutedEventHandler(Contacts_Loaded);
         }
 
