@@ -107,6 +107,7 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SocketClient.cs" />
     <Compile Include="UserInfo.cs" />
     <Compile Include="HawaiiClient.cs" />
     <Compile Include="MainPage.xaml.cs">
