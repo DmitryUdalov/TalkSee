@@ -17,16 +17,28 @@ namespace SpeechToTextSampleApp
 {
     public partial class Contacts : PhoneApplicationPage
     {
-
+        private AppSettings settings = new AppSettings();
         public Contacts()
         {
             InitializeComponent();
-            
+
             SocketClient client = new SocketClient();
             client.Connect("lore.cs.purdue.edu", 3459);
-            client.Send("ADD test\n");
+            string add;
+            if (settings.PortSetting != null && settings.UsernameSetting != null)
+            {
+                add = "ADD " + settings.UsernameSetting + " " + settings.PortSetting + "\n";
+            }
+            else
+            {
+                add = "ADD default default\n";
+            }
+            client.Send(add);
             string result = client.Receive();
-            Debug.WriteLine(result);
+            char[] delimiterChars = { ' ' };
+            string[] words = result.Split(delimiterChars);
+            Debug.WriteLine(words[0]);
+            Debug.WriteLine(words[1]);
             client.Close();
 
             Loaded += new RoutedEventHandler(Contacts_Loaded);
