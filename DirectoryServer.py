@@ -9,6 +9,10 @@ import thread
 import time
 import subprocess
 
+# a test user
+# UserName Port UserID Status
+testuser = "Ashley 1234 4321 busy"
+
 # this is run each time the server gets a TCP packet
 class MyTCPHandler(SocketServer.StreamRequestHandler):
 
@@ -61,4 +65,7 @@ except:
     print "Error: unable to start thread"
 
 # start the server
+# add testuser
+addUser(testuser)
 main()
+
