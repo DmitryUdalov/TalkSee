@@ -1,0 +1,202 @@
+﻿Build started 11/3/2012 5:09:31 PM.
+     1>Project "C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\BackEnd\BackEnd.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /I"C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\BackEnd\\" /I"Generated Files\\" /Ix86\Debug\ /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D WIN32_LEAN_AND_MEAN /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x86\Debug\\" /Fd"x86\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt ApiLock.cpp BackEndAudio.cpp BackEndCapture.cpp BackEndTransport.cpp CallController.cpp Globals.cpp
+         ApiLock.cpp
+         BackEndAudio.cpp
+         BackEndCapture.cpp
+         BackEndTransport.cpp
+         CallController.cpp
+         Globals.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.dll" /INCREMENTAL /NOLOGO windowsphonecore.lib runtimeobject.lib PhoneAudioSes.lib WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /NODEFAULTLIB:ole32.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /WINMD /WINMDFILE:"C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL x86\Debug\ApiLock.obj
+         x86\Debug\BackEndAudio.obj
+         x86\Debug\BackEndCapture.obj
+         x86\Debug\BackEndTransport.obj
+         x86\Debug\CallController.obj
+         x86\Debug\Globals.obj
+            Creating library C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.lib and object C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.exp
+         BackEnd.vcxproj -> C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.dll
+       CustomBuildStep:
+         pushd "C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\"
+         WinMdIdl.exe "C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.winmd"
+         MIdl.exe /env win32 /winrt /ns_prefix /metadata_dir "C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /out "C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\BackEndProxyStub" "C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.idl"
+         MIdl.exe /env win32 /winrt /ns_prefix /metadata_dir "C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /out "C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\BackEndProxyStub" "C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.OutOfProcess.idl"
+         "C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\BackEnd\OopServerRegistrationHelper.exe" /winmd:"C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.winmd" /dll_name:PhoneVoIPApp.BackEnd /namespace:PhoneVoIPApp.BackEnd.OutOfProcess /app_manifest:"C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\UI\Properties\WMAppManifest.xml" /helper_dir:"C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\Agents"
+         popd
+         :VCEnd
+         Microsoft(R) Metadata IDL Generation Utility Version 8.00.0008
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000b(Windows.Storage.Streams.IBuffer), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000c(Windows.Foundation.EventRegistrationToken), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000c(Windows.Foundation.EventRegistrationToken), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000c(Windows.Foundation.EventRegistrationToken), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000c(Windows.Foundation.EventRegistrationToken), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000c(Windows.Foundation.EventRegistrationToken), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000c(Windows.Foundation.EventRegistrationToken), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 1000013(Windows.Foundation.DateTime), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000d(Windows.Foundation.IClosable), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000d(Windows.Foundation.IClosable), HR = 0x80004005
+     1>c:\users\ashley\documents\visual studio 2012\projects\voip\c#,c++\x86\debug\backend\phonevoipapp.backend.winmd : warning W2001: Failed to resolve typeref : token = 100000d(Windows.Foundation.IClosable), HR = 0x80004005
+         Generating .\PhoneVoIPApp.BackEnd.idl
+         Generating .\PhoneVoIPApp.BackEnd.OutOfProcess.idl
+         Microsoft (R) 32b/64b MIDLRT Compiler Engine Version 8.00.0156  
+         Copyright (c) Microsoft Corporation. All rights reserved.
+         MIDLRT Processing C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.idl
+         PhoneVoIPApp.BackEnd.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\inspectable.idl
+         inspectable.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\wtypes.idl
+         wtypes.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\wtypesbase.idl
+         wtypesbase.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\basetsd.h
+         basetsd.h
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\guiddef.h
+         guiddef.h
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\unknwn.idl
+         unknwn.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\hstring.idl
+         hstring.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\AsyncInfo.idl
+         AsyncInfo.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\EventToken.idl
+         EventToken.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Foundation.idl
+         Windows.Foundation.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\IVectorChangedEventArgs.idl
+         IVectorChangedEventArgs.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\oaidl.idl
+         oaidl.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\objidl.idl
+         objidl.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Storage.Streams.idl
+         Windows.Storage.Streams.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Storage.idl
+         Windows.Storage.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Storage.FileProperties.idl
+         Windows.Storage.FileProperties.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Storage.Search.idl
+         Windows.Storage.Search.idl
+         Microsoft (R) 32b/64b MIDL Compiler Version 8.00.0595 
+         Copyright (c) Microsoft Corporation. All rights reserved.
+         Processing C:\Users\Ashley\AppData\Local\Temp\PhoneVoIPApp.BackEnd.idl-7ddfaca5
+         PhoneVoIPApp.BackEnd.idl-7ddfaca5
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\inspectable.idl
+         inspectable.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\wtypes.idl
+         wtypes.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\wtypesbase.idl
+         wtypesbase.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\basetsd.h
+         basetsd.h
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\guiddef.h
+         guiddef.h
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\unknwn.idl
+         unknwn.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\hstring.idl
+         hstring.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\AsyncInfo.idl
+         AsyncInfo.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\EventToken.idl
+         EventToken.idl
+         Processing .\Windows.Foundation.idl-0c2d055d
+         Windows.Foundation.idl-0c2d055d
+         Processing .\IVectorChangedEventArgs.idl-b62f534f
+         IVectorChangedEventArgs.idl-b62f534f
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\oaidl.idl
+         oaidl.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\objidl.idl
+         objidl.idl
+         Processing .\Windows.Storage.Streams.idl-2a41708d
+         Windows.Storage.Streams.idl-2a41708d
+         Processing .\Windows.Storage.idl-d57ae49d
+         Windows.Storage.idl-d57ae49d
+         Processing .\Windows.Storage.FileProperties.idl-56838da1
+         Windows.Storage.FileProperties.idl-56838da1
+         Processing .\Windows.Storage.Search.idl-fe1439a4
+         Windows.Storage.Search.idl-fe1439a4
+         Microsoft (R) 32b/64b MIDLRT Compiler Engine Version 8.00.0156  
+         Copyright (c) Microsoft Corporation. All rights reserved.
+         MIDLRT Processing C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.OutOfProcess.idl
+         PhoneVoIPApp.BackEnd.OutOfProcess.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\inspectable.idl
+         inspectable.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\wtypes.idl
+         wtypes.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\wtypesbase.idl
+         wtypesbase.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\basetsd.h
+         basetsd.h
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\guiddef.h
+         guiddef.h
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\unknwn.idl
+         unknwn.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\hstring.idl
+         hstring.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\AsyncInfo.idl
+         AsyncInfo.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\EventToken.idl
+         EventToken.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Foundation.idl
+         Windows.Foundation.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\IVectorChangedEventArgs.idl
+         IVectorChangedEventArgs.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\oaidl.idl
+         oaidl.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\objidl.idl
+         objidl.idl
+         MIDLRT Processing .\PhoneVoIPApp.BackEnd.idl
+         PhoneVoIPApp.BackEnd.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Storage.Streams.idl
+         Windows.Storage.Streams.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Storage.idl
+         Windows.Storage.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Storage.FileProperties.idl
+         Windows.Storage.FileProperties.idl
+         MIDLRT Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\abi\Windows.Storage.Search.idl
+         Windows.Storage.Search.idl
+         Microsoft (R) 32b/64b MIDL Compiler Version 8.00.0595 
+         Copyright (c) Microsoft Corporation. All rights reserved.
+         Processing C:\Users\Ashley\AppData\Local\Temp\PhoneVoIPApp.BackEnd.OutOfProcess.idl-e7ade37f
+         PhoneVoIPApp.BackEnd.OutOfProcess.idl-e7ade37f
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\inspectable.idl
+         inspectable.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\wtypes.idl
+         wtypes.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\wtypesbase.idl
+         wtypesbase.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\basetsd.h
+         basetsd.h
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\guiddef.h
+         guiddef.h
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\unknwn.idl
+         unknwn.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\hstring.idl
+         hstring.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\AsyncInfo.idl
+         AsyncInfo.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\EventToken.idl
+         EventToken.idl
+         Processing .\Windows.Foundation.idl-655df0e1
+         Windows.Foundation.idl-655df0e1
+         Processing .\IVectorChangedEventArgs.idl-b64c37f9
+         IVectorChangedEventArgs.idl-b64c37f9
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\oaidl.idl
+         oaidl.idl
+         Processing C:\Program Files (x86)\Windows Phone Kits\8.0\Include\objidl.idl
+         objidl.idl
+         Processing .\PhoneVoIPApp.BackEnd.idl-ed311c40
+         PhoneVoIPApp.BackEnd.idl-ed311c40
+         Processing .\Windows.Storage.Streams.idl-1b14f123
+         Windows.Storage.Streams.idl-1b14f123
+         Processing .\Windows.Storage.idl-18ff90ae
+         Windows.Storage.idl-18ff90ae
+         Processing .\Windows.Storage.FileProperties.idl-6ba4e969
+         Windows.Storage.FileProperties.idl-6ba4e969
+         Processing .\Windows.Storage.Search.idl-9a29003d
+         Windows.Storage.Search.idl-9a29003d
+     1>Done Building Project "C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\BackEnd\BackEnd.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.64
