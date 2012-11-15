@@ -250,6 +250,7 @@ namespace PhoneVoIPApp.UI
         private void PushChannel_HttpNotificationReceived(object sender, HttpNotificationEventArgs e)
         {
             // TODO: Process raw push notifications here, if required.
+
         }
 
         // The name of the incoming call task.
@@ -305,6 +306,11 @@ namespace PhoneVoIPApp.UI
             keepAliveTask.Description = "keep-alive task";
             ScheduledActionService.Add(keepAliveTask);
         }
+
+        /// <summary>
+        /// Gets or sets global String object to pass recognition text to different pages.
+        /// </summary>
+        public static string RecognizedTextObject { get; set; }
 
         #endregion
     }

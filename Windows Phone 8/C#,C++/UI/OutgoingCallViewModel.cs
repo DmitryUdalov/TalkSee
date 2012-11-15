@@ -25,7 +25,7 @@ namespace PhoneVoIPApp.UI
             : base()
         {
             this.RecipientName = "Mark Higa";
-            this.RecipientNumber = "1-950-500-5190";
+            this.RecipientNumber = "(951) 500 5190";
         }
 
         private string recipientName;

@@ -49,21 +49,30 @@
                     <TextBlock Name="CallerNumberText" Text="{Binding CallerNumber}" Margin="10,5,10,10" Style="{StaticResource PhoneTextSmallStyle}">Caller Number</TextBlock>
                     <TextBlock Name="CallStartTimeText" Text="{Binding CallStartTime}" Margin="10,5,10,10" Style="{StaticResource PhoneTextSmallStyle}">Call Start Time</TextBlock>
                 </StackPanel>
-                <StackPanel Name="AudioRouteStackPanel" Orientation="Horizontal">
-                    <Button IsEnabled="{Binding IsEarpieceButtonEnabled}" Margin="0,10,0,10" Name="EarpieceButton" BorderBrush="{Binding EarpieceButtonBorder}" Click="EarpieceButton_Click">
-                        <TextBlock Text="earpiece" Style="{StaticResource PhoneTextSmallStyle}" Margin="0" />
-                    </Button>
-                    <Button IsEnabled="{Binding IsSpeakerButtonEnabled}" Margin="0,10,0,10" Name="SpeakerButton" BorderBrush="{Binding SpeakerButtonBorder}" Click="SpeakerButton_Click">
-                        <TextBlock Text="speaker" Style="{StaticResource PhoneTextSmallStyle}" Margin="0" />
-                    </Button>
-                    <Button IsEnabled="{Binding IsBluetoothButtonEnabled}" Margin="0,10,0,10" Name="BluetoothButton" BorderBrush="{Binding BluetoothButtonBorder}" Click="BluetoothButton_Click">
-                        <TextBlock Text="bluetooth" Style="{StaticResource PhoneTextSmallStyle}" Margin="0" />
-                    </Button>
+                <StackPanel Name="STTStackPanel" Orientation="Horizontal">
+                    <ListBox 
+                        x:Name="RecognizedStringListBox" 
+                        Grid.Row="3"
+                        Foreground="#FF0D8690" 
+                        Background="#79FFFFFF" 
+                        BorderBrush="#A3009DEF" 
+                        BorderThickness="1" 
+                        Cursor="Hand" 
+                        SelectionChanged="RecognizedStringListBox_SelectionChanged"  
+                        SelectionMode="Single" 
+                        ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                        ScrollViewer.HorizontalScrollBarVisibility="Visible" 
+                        FontSize="20" 
+                        Padding="5"
+                        Margin="12,5,12,0" 
+                        Height="116" 
+                        Width="429"  
+                    />
                 </StackPanel>
                 <Canvas>
                     <!--These MediaElements have not defined their stretch modes, and so will letterbox automatically-->
                     <!--To avoid letterboxing, you can change it by setting Stretch property-->
-                    <MediaElement Visibility="{Binding BigHeadVisibility}" MediaOpened="bigHead_MediaOpened_1" MediaFailed="bigHead_MediaFailed_1" x:Name="bigHead" Source="{Binding BigHeadPreviewUri}" Width="456" Height="480" RenderTransformOrigin="0.5,0.5" >
+                    <MediaElement Visibility="{Binding BigHeadVisibility}" MediaOpened="bigHead_MediaOpened_1" MediaFailed="bigHead_MediaFailed_1" x:Name="bigHead" Source="{Binding BigHeadPreviewUri}" Width="456" Height="405" RenderTransformOrigin="0.5,0.5" Canvas.Top="75" >
                         <MediaElement.RenderTransform>
                             <CompositeTransform Rotation="{Binding CameraRotation}"/>
                         </MediaElement.RenderTransform>
