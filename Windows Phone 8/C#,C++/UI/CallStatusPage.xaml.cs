@@ -29,7 +29,7 @@ namespace PhoneVoIPApp.UI
         SpeechRecognizer recognizer;
         IAsyncOperation<SpeechRecognitionResult> recoOperation;
 
-        bool _isNew = true;
+        //bool _isNew = true;
         bool recoEnabled = false;
         public CallStatusPage()
             : base(new CallStatusViewModel())
@@ -49,7 +49,7 @@ namespace PhoneVoIPApp.UI
             // Re-bind MediaElements explictly, so video will play after app has been resumed
             bigHead.SetBinding(MediaElement.SourceProperty, new System.Windows.Data.Binding("BigHeadPreviewUri"));
             littleHead.SetBinding(MediaElement.SourceProperty, new System.Windows.Data.Binding("LittleHeadPreviewUri"));
-            try
+           /* try
             {
                 // Create the speech recognizer and speech synthesizer objects. 
                 if (this.synthesizer == null)
@@ -61,14 +61,15 @@ namespace PhoneVoIPApp.UI
                     this.recognizer = new SpeechRecognizer();
                 }
                 // Set up a list of colors to recognize.
-                //this.recognizer.Grammars.AddGrammarFromList("Colors", new List<string>() { "red", "cyan", "blue", "yellow", "orange", "fire color", "purple", "black", "jet black", "green", "white", "dark gray", "brown", "magenta", "gray" });
+                this.recognizer.Grammars.AddGrammarFromList("Colors", new List<string>() { "red", "cyan", "blue", "yellow", "orange", "fire color", "purple", "black", "jet black", "green", "white", "dark gray", "brown", "magenta", "gray" });
             }
             catch (Exception err)
             {
-                //this.SetRecognizedTextListBox(err.ToString());
+                this.SetRecognizedTextListBox(err.ToString());
                 //txtResult.Text = err.ToString();
             }
-            startSTT();
+            startSTT();*/
+            
         }
 
         private async void startSTT()
@@ -96,11 +97,11 @@ namespace PhoneVoIPApp.UI
                     var recoResult = await this.recoOperation;
 
                     // Check the confidence level of the speech recognition attempt.
-                    if ((int)recoResult.TextConfidence < (int)SpeechRecognitionConfidence.Medium)
+                    if ((int)recoResult.TextConfidence < (int)SpeechRecognitionConfidence.Low)
                     {
                         // If the confidence level of the speech recognition attempt is low, 
                         // ask the user to try again.
-                        //this.SetRecognizedTextListBox("Not sure what you said, please try again.");
+                        this.SetRecognizedTextListBox("Not sure what you said, please try again.");
                         Debug.WriteLine("Not sure what you said");
                         //txtResult.Text = "Not sure what you said, please try again.";
                         await synthesizer.SpeakTextAsync("Not sure what you said, please try again");
@@ -148,20 +149,21 @@ namespace PhoneVoIPApp.UI
         /// <param name="recognitionResultStrings">
         /// List of recognition results.
         /// </param>
-        private void SetRecognizedTextListBox(List<string> recognitionResultStrings)
+        private void SetRecognizedTextListBox(string recognitionResultStrings)//List<string> recognitionResultStrings)
         {
             if (recognitionResultStrings != null)
             {
-                if (recognitionResultStrings.Count == 0)
-                {
+                //if (recognitionResultStrings.Count == 0)
+                //{
               
-                    this.RecognizedStringListBox.Items.Add("Empty recognized text is received.");
-                }
-                else
-                {
-                    recognitionResultStrings.ForEach((item) => this.RecognizedStringListBox.Items.Add(item));
-                    //this.RecognizedStringListBox.Items.Add(recognitionResultStrings);
-                }
+                    //this.RecognizedStringListBox.Items.Add("Empty recognized text is received.");
+                    this.RecognizedStringListBox.Items.Add(recognitionResultStrings);
+                //}
+                //else
+                //{
+                  //  recognitionResultStrings.ForEach((item) => this.RecognizedStringListBox.Items.Add(item));
+                    ///this.RecognizedStringListBox.Items.Add(recognitionResultStrings);
+                //}
             }
             else
             {
@@ -180,13 +182,13 @@ namespace PhoneVoIPApp.UI
 
         private void HangUpButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            startSTT();
+            //startSTT();
             ((CallStatusViewModel)this.ViewModel).HangUp();
         }
 
         private void HoldButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            startSTT();
+            //startSTT();
             ((CallStatusViewModel)this.ViewModel).ToggleHold();
         }
 
@@ -248,6 +250,17 @@ namespace PhoneVoIPApp.UI
 
                 RecognizedStringListBox.SelectedItem = null;
             }
+        }
+
+        private void SettingsMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
+        }
+
+
+        private void HelpMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Help.xaml", UriKind.Relative));
         }
     }
 }

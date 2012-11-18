@@ -24,8 +24,8 @@ namespace PhoneVoIPApp.UI
         public OutgoingCallViewModel()
             : base()
         {
-            this.RecipientName = "Mark Higa";
-            this.RecipientNumber = "(951) 500 5190";
+            this.RecipientName = GlobalVariables.selectedUser.UserName;
+            this.RecipientNumber = GlobalVariables.selectedUser.Number;
         }
 
         private string recipientName;

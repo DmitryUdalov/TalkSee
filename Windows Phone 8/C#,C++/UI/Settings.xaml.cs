@@ -29,11 +29,11 @@ namespace SpeechToTextSampleApp
             ApplicationBar.IsVisible = true;
             ApplicationBar.Opacity = 1.0;
 
-            ApplicationBarIconButton doneButton = new ApplicationBarIconButton(new Uri("/Images/appbar.check.rest.png", UriKind.Relative));
+            ApplicationBarIconButton doneButton = new ApplicationBarIconButton(new Uri("Assets\\appbar.check.rest.png", UriKind.Relative));
             doneButton.Text = "done";
             doneButton.Click += new EventHandler(doneButton_Click);
 
-            ApplicationBarIconButton cancelButton = new ApplicationBarIconButton(new Uri("/Images/appbar.cancel.rest.png", UriKind.Relative));
+            ApplicationBarIconButton cancelButton = new ApplicationBarIconButton(new Uri("Assets\\appbar.cancel.rest.png", UriKind.Relative));
             cancelButton.Text = "cancel";
             cancelButton.Click += new EventHandler(cancelButton_Click);
 

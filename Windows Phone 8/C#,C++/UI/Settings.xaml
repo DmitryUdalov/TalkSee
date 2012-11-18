@@ -28,9 +28,9 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Height="60" HorizontalAlignment="Left" Margin="65,12,0,0" Name="textBlock1" Text="Username" VerticalAlignment="Top" Width="169" />
+            <TextBlock Height="60" HorizontalAlignment="Left" Margin="65,12,0,0" Name="textBlock1" Text="Name" VerticalAlignment="Top" Width="169" />
             <TextBox Height="78" HorizontalAlignment="Left" Margin="60,60,0,0" Name="textBoxUsername"  VerticalAlignment="Top" Width="274"  />
-            <TextBlock Height="60" HorizontalAlignment="Left" Margin="65,160,0,0" Name="textBlock2" Text="Port Number" VerticalAlignment="Top" Width="169" />
+            <TextBlock Height="60" HorizontalAlignment="Left" Margin="65,160,0,0" Name="textBlock2" Text="Status" VerticalAlignment="Top" Width="169" />
             <TextBox Height="78" HorizontalAlignment="Left" Margin="60,208,0,0" Name="textBoxPort" VerticalAlignment="Top" Width="274" />
         </Grid>
     </Grid>

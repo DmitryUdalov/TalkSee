@@ -15,16 +15,16 @@ namespace SpeechToTextSampleApp
     public class UserInfo
     {
         public String UserName { get; set; }
-        public int PortNumber { get; set; }
+        public String Number { get; set; }
         public int UserID { get; set; }
         public String Status { get; set; }
         //Status: Available = 0, Offline = 1, Busy = 2
 
-        public UserInfo(string name, int port, int id, string status)
+        public UserInfo(string name, string number, int id, string status)
         {
             // TODO: Complete member initialization
             this.UserName = name;
-            this.PortNumber = port;
+            this.Number = number;
             this.UserID = id;
             this.Status = status;
         }

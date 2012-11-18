@@ -55,4 +55,12 @@
             </StackPanel>
         </Grid>
     </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="SettingsMenuItem"   Text="Settings"  Click="SettingsMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem x:Name="HelpMenuItem"   Text="Help"  Click="HelpMenuItem_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </local:BasePage>

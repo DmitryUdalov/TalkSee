@@ -20,3 +20,4 @@ C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\ARM\Debug
 C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\ARM\Debug\PhoneVoIPApp.UI.dll
 C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\ARM\Debug\PhoneVoIPApp.UI.pdb
 C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\ARM\Debug\XapCacheFile.xml
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\ARM\Debug\STTPage.g.cs

@@ -104,6 +104,8 @@
       <DependentUpon>CallStatusPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Contacts.xaml.cs" />
+    <Compile Include="ContactsViewModel.cs" />
+    <Compile Include="GlobalVariables.cs" />
     <Compile Include="HawaiiClient.cs" />
     <Compile Include="Help.xaml.cs" />
     <Compile Include="IncomingCallPage.xaml.cs">
@@ -128,6 +130,9 @@
     <Compile Include="RecognizedSpeechPage.xaml.cs" />
     <Compile Include="Settings.xaml.cs" />
     <Compile Include="SocketClient.cs" />
+    <Compile Include="STTPage.xaml.cs">
+      <DependentUpon>STTPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -169,8 +174,13 @@
     <Page Include="Settings.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="STTPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\appbar_cancel_rest.png" />
+    <Content Include="Assets\appbar_check_rest.png" />
     <Content Include="Assets\ApplicationIcon.png" />
     <Content Include="Assets\DefaultContactImage.png" />
     <Content Include="Assets\MetroAlignmentGrid.png" />

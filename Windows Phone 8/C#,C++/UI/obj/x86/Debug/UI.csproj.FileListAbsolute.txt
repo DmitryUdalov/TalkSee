@@ -42,3 +42,4 @@ C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\x86\Debug
 C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\x86\Debug\PhoneVoIPApp.UI.dll
 C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\x86\Debug\PhoneVoIPApp.UI.pdb
 C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\x86\Debug\XapCacheFile.xml
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\UI\obj\x86\Debug\STTPage.g.cs

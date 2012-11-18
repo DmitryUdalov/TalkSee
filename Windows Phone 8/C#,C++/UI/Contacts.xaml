@@ -31,8 +31,8 @@
             <!--List of contacts will be inserted in this box-->
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Button Width="460" Height="120" Click="Button_Click">
-                        <Button.Content>
+                    <Button IsEnabled="{Binding IsMakeOutgoingCallButtonEnabled}" Width="460" Height="120" Click="Button_Click">
+                        <Button.Content >
                             <StackPanel Orientation="Horizontal" Height="80" Width="400">
                                 <!-- <Image Source="{Binding Image}" Width="80" Height="80"/>-->
                                 <StackPanel Orientation="Vertical" Height="80">
@@ -51,18 +51,17 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-    </Grid>
- 
-    <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+           <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="SettingsMenuItem"   Text="Settings"  Click="SettingsMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem x:Name="HelpMenuItem"   Text="Help"  Click="HelpMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem x:Name="STTMenuItem" Text="STT" Click="STT_Click"/>
+                <shell:ApplicationBarMenuItem x:Name="SimulateIncomingMenuItem" Text="Simulate Incoming Call" Click="SimulateIncomingCallButton_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

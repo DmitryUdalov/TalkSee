@@ -16,7 +16,7 @@
       <Capability Name="ID_CAP_SPEECH_RECOGNITION" />
     </Capabilities>
     <Tasks>
-      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+      <DefaultTask Name="_default" NavigationPage="Contacts.xaml" />
       <ExtendedTask Name="BackgroundTask">
         <BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="IncomingAndKeepAliveAgent" Source="PhoneVoIPApp.Agents" Type="PhoneVoIPApp.Agents.ScheduledAgentImpl" />
         <BackgroundServiceAgent Specifier="VoIPCallInProgressAgent" Name="CallInProgressAgent" Source="PhoneVoIPApp.Agents" Type="PhoneVoIPApp.Agents.CallInProgressAgentImpl" />

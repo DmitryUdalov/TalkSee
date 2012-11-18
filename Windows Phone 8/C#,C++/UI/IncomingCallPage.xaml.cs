@@ -1,3 +1,4 @@
+using System;
 /* 
     Copyright (c) 2012 Microsoft Corporation.  All rights reserved.
     Use of this sample source code is subject to the terms of the Microsoft license 
@@ -29,6 +30,16 @@ namespace PhoneVoIPApp.UI
         private void SimulateButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             ((IncomingCallViewModel)this.ViewModel).Simulate();
+        }
+        private void SettingsMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
+        }
+
+
+        private void HelpMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Help.xaml", UriKind.Relative));
         }
     }
 }
