@@ -10,34 +10,44 @@ import time
 import subprocess
 
 # a test user
-# UserName Port UserID Status
-testuser = "Ashley 1234 4321 busy"
+# username number status
+testuser = "Ashley 578-245-1234 busy"
+testuser2 = "Chris 234-123-1234 available"
 
 # this is run each time the server gets a TCP packet
 class MyTCPHandler(SocketServer.StreamRequestHandler):
 
     def handle(self):
         self.data = self.rfile.readline().strip()
-        #print "%s wrote: " % self.client_address[0]
+        print "%s wrote: " % self.client_address[0]
         print self.data
         if(self.data[:6] == "REMOVE" and self.data[:7] != "REFRESH"):
             removeUser(self.data[7:])
         elif(self.data[:3] == "ADD"):
             addUser(self.data[4:])
-        #print ipuserlist
+        #i = 0
+        #for user in ipuserlist:
+            #i = i+1
+        #print i
+        #j = 0
         for user in ipuserlist:
-            self.wfile.write(user + "\n")
-        #self.wfile.write(ipuserlist)
+            #j = j + 1
+            print user
+            #if j == i:
+                #self.wfile.write(user)
+            #else:
+            self.wfile.write(user + "|")
 
 # add a user
 def addUser(toAdd):
-    if (toAdd) not in ipuserlist:
+    if (toAdd) not in ipuserlist and not toAdd=="":
         ipuserlist.append(toAdd)
 
 # remove a user
 def removeUser(toRemove):
     #print toRemove
-    ipuserlist.remove(toRemove)
+    if toRemove in ipuserlist:
+      ipuserlist.remove(toRemove)
 
 def main():
     if(len(sys.argv) == 2):
@@ -56,7 +66,11 @@ def main():
 def server_print():
     while(1):
         time.sleep(5)
-        print ipuserlist
+        print "----------"
+        for user in ipuserlist:
+          print user
+        #print ipuserlist
+        print "----------"
 
 ipuserlist = []
 try:
@@ -67,5 +81,6 @@ except:
 # start the server
 # add testuser
 addUser(testuser)
+addUser(testuser2)
 main()
 
