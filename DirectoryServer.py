@@ -35,14 +35,14 @@ class MyTCPHandler(SocketServer.StreamRequestHandler):
 
 # add a user
 def addUser(toAdd):
-    print toAdd
     if (toAdd) not in ipuserlist and not toAdd=="":
-        ipuserlist.append(toAdd)
+        ipuserlist.append(toAdd + ' ' + str(time.time()))
+        #ipuserlist.append(toAdd)
 
 # remove a user
 def removeUser(toRemove):
-    print toRemove
     if toRemove in ipuserlist and not toRemove=="":
+        print toRemove
         ipuserlist.remove(toRemove)
 
 def main():
@@ -60,19 +60,29 @@ def main():
 
 # print out the directory list periodically
 def server_print():
-    pass
-    #while(1):
-    #    time.sleep(5)
-    #    print "----------"
-    #    for user in ipuserlist:
-    #      print user
-    #    print "----------"
+    while(1):
+        time.sleep(5)
+        print "----------"
+        for user in ipuserlist:
+          print user
+        print "----------"
+
+def check_timestamps():
+    while(1):
+        time.sleep(5)
+        print "checking timestamps"
+        print time.time()
+        for user in ipuserlist:
+          if (time.time() - float(user[-13:]) >= 300):
+              removeUser(user)
 
 ipuserlist = []
-#try:
-#    thread.start_new_thread(server_print, ())
-#except:
-#    print "Error: unable to start thread"
+print time.time()
+try:
+    #thread.start_new_thread(server_print, ())
+    thread.start_new_thread(check_timestamps, ())
+except:
+    print "Error: unable to start thread"
 
 # start the server
 # add testuser
