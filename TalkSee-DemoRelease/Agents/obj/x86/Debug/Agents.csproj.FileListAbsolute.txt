@@ -1,0 +1,14 @@
+C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\Agents\Bin\x86\Debug\PhoneVoIPApp.Agents.dll
+C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\Agents\Bin\x86\Debug\PhoneVoIPApp.Agents.pdb
+C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\Agents\Bin\x86\Debug\PhoneVoIPApp.BackEnd.winmd
+C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\Agents\Bin\x86\Debug\PhoneVoIPApp.BackEnd.pdb
+C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\Agents\obj\x86\Debug\Agents.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\Agents\obj\x86\Debug\PhoneVoIPApp.Agents.dll
+C:\Users\Ashley\Documents\Visual Studio 2012\Projects\VoIP\C#,C++\Agents\obj\x86\Debug\PhoneVoIPApp.Agents.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\Bin\x86\Debug\PhoneVoIPApp.Agents.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\Bin\x86\Debug\PhoneVoIPApp.Agents.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\Bin\x86\Debug\PhoneVoIPApp.BackEnd.winmd
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\Bin\x86\Debug\PhoneVoIPApp.BackEnd.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\obj\x86\Debug\Agents.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\obj\x86\Debug\PhoneVoIPApp.Agents.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\obj\x86\Debug\PhoneVoIPApp.Agents.pdb

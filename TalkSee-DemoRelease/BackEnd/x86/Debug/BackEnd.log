@@ -1,0 +1,18 @@
+﻿Build started 11/19/2012 6:38:06 PM.
+     1>Project "C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\BackEnd\BackEnd.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /I"C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\BackEnd\\" /I"Generated Files\\" /Ix86\Debug\ /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D WIN32_LEAN_AND_MEAN /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x86\Debug\\" /Fd"x86\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt CallController.cpp
+         CallController.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.dll" /INCREMENTAL /NOLOGO windowsphonecore.lib runtimeobject.lib PhoneAudioSes.lib WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /NODEFAULTLIB:ole32.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /WINMD /WINMDFILE:"C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL x86\Debug\ApiLock.obj
+         x86\Debug\BackEndAudio.obj
+         x86\Debug\BackEndCapture.obj
+         x86\Debug\BackEndTransport.obj
+         x86\Debug\CallController.obj
+         x86\Debug\Globals.obj
+         BackEnd.vcxproj -> C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEnd\PhoneVoIPApp.BackEnd.dll
+     1>Done Building Project "C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\BackEnd\BackEnd.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.46

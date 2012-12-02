@@ -1,0 +1,7 @@
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\Bin\ARM\Debug\PhoneVoIPApp.Agents.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\Bin\ARM\Debug\PhoneVoIPApp.Agents.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\Bin\ARM\Debug\PhoneVoIPApp.BackEnd.winmd
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\Bin\ARM\Debug\PhoneVoIPApp.BackEnd.pdb
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\obj\ARM\Debug\Agents.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\obj\ARM\Debug\PhoneVoIPApp.Agents.dll
+C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\Agents\obj\ARM\Debug\PhoneVoIPApp.Agents.pdb

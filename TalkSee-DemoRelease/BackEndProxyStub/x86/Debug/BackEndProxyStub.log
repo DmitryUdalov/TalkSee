@@ -1,0 +1,23 @@
+﻿Build started 11/10/2012 1:31:38 PM.
+     1>Project "C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\BackEndProxyStub\BackEndProxyStub.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /I"C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\BackEndProxyStub\\" /ZI /nologo /W1 /WX- /Od /Oy- /D WIN32_LEAN_AND_MEAN /D WIN32 /D REGISTER_PROXY_DLL /D _USRDLL /D _WINDLL /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x86\Debug\\" /Fd"x86\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt dlldata.c PhoneVoIPApp.BackEnd.OutOfProcess_i.c PhoneVoIPApp.BackEnd.OutOfProcess_p.c PhoneVoIPApp.BackEnd_i.c PhoneVoIPApp.BackEnd_p.c
+         PhoneVoIPApp.BackEnd_p.c
+         PhoneVoIPApp.BackEnd_i.c
+         PhoneVoIPApp.BackEnd.OutOfProcess_p.c
+         PhoneVoIPApp.BackEnd.OutOfProcess_i.c
+         dlldata.c
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEndProxyStub\PhoneVoIPApp.BackEndProxyStub.dll" /INCREMENTAL /NOLOGO windowsphonecore.lib runtimeobject.lib rpcrt4.lib WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /DEF:"BackEndProxyStub.def" /MANIFEST:NO /PDB:"C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEndProxyStub\PhoneVoIPApp.BackEndProxyStub.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /WINMD:NO /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEndProxyStub\PhoneVoIPApp.BackEndProxyStub.lib" /MACHINE:X86 /DLL x86\Debug\dlldata.obj
+         x86\Debug\PhoneVoIPApp.BackEnd.OutOfProcess_i.obj
+         x86\Debug\PhoneVoIPApp.BackEnd.OutOfProcess_p.obj
+         x86\Debug\PhoneVoIPApp.BackEnd_i.obj
+         x86\Debug\PhoneVoIPApp.BackEnd_p.obj
+            Creating library C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEndProxyStub\PhoneVoIPApp.BackEndProxyStub.lib and object C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEndProxyStub\PhoneVoIPApp.BackEndProxyStub.exp
+         BackEndProxyStub.vcxproj -> C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\x86\Debug\BackEndProxyStub\PhoneVoIPApp.BackEndProxyStub.dll
+     1>Done Building Project "C:\Users\Ashley\Documents\GitHub\TalkSee\Windows Phone 8\C#,C++\BackEndProxyStub\BackEndProxyStub.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.16
