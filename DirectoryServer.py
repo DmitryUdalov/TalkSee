@@ -8,11 +8,13 @@ import SocketServer
 import thread
 import time
 import subprocess
+from cStringIO import StringIO
+from tokenize import generate_tokens
 
 # a test user
 # username number status
 testuser = "Ashley 578-245-1234 busy"
-testuser2 = "Chris 234-123-1234 available"
+testuser2 = "Ashley 234-123-1234 available"
 testuser3 = "Mark 234-123-1234 busy"
 testuser4 = "Paul 234-123-1234 busy"
 testuser5 = "Steve 234-123-1234 available"
@@ -30,6 +32,7 @@ class MyTCPHandler(SocketServer.StreamRequestHandler):
             addUser(self.data[4:])
         #print "SENDING"
         ipuserlist.sort()
+        dedup()
         print ipuserlist
         self.wfile.write(ipuserlist)
 
@@ -76,6 +79,24 @@ def check_timestamps():
           if (time.time() - float(user[-13:]) >= 300):
               removeUser(user)
 
+def dedup():
+    user1 = ""
+    user2 = ""
+    i = 0
+    STRING = 1
+    for user in ipuserlist:
+        test = list(token[STRING] for token
+            in generate_tokens(StringIO(user).readline)
+            if token[STRING])
+        user1 = test[0]
+        if user1 == user2:
+          print "duplicate"
+          print ipuserlist[i]
+          ipuserlist.pop(i)
+        user2 = user1
+        i = i+1
+
+
 ipuserlist = []
 print time.time()
 try:
@@ -91,5 +112,7 @@ addUser(testuser2)
 addUser(testuser3)
 addUser(testuser4)
 addUser(testuser5)
+dedup()
+print ipuserlist
 main()
 
